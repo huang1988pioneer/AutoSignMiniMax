@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-19T15:01:36.398Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/35450427718",
+  "generatedAt": "2026-09-19T15:07:19.511Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/35450726703",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -16,20 +16,22 @@
       "currentPoints": 569.099,
       "remainingCredits": 569.099,
       "siteStreak": 2,
-      "finishedAt": "2026-09-19T15:01:05.784Z"
+      "finishedAt": "2026-09-19T15:06:41.726Z"
     },
     {
       "account": 2,
       "name": "abuhg17",
       "label": "abuhg17",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
+      "status": "checked_in",
+      "streak": 1,
+      "lastCheckInDate": "2026-09-19",
+      "checkInDates": [
+        "2026-09-19"
+      ],
+      "currentPoints": 2903.75,
+      "remainingCredits": 2903.75,
+      "siteStreak": 3,
+      "finishedAt": "2026-09-19T15:06:34.317Z"
     },
     {
       "account": 3,
@@ -441,6 +443,6 @@
     "recorded": 33,
     "max": 1,
     "min": 0,
-    "average": 0
+    "average": 0.1
   }
 }
