@@ -1,0 +1,90 @@
+name: Release desktop app
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    name: Package ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - rid: win-x64
+            name: windows-x64
+            extension: zip
+          - rid: linux-x64
+            name: linux-x64
+            extension: tar.gz
+          - rid: osx-x64
+            name: macos-x64
+            extension: tar.gz
+          - rid: osx-arm64
+            name: macos-arm64
+            extension: tar.gz
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Publish self-contained app
+        run: >-
+          dotnet publish MiniMaxFlow/MiniMaxFlow.csproj
+          --configuration Release
+          --runtime ${{ matrix.rid }}
+          --self-contained true
+          --output publish/${{ matrix.name }}
+          -p:PublishSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -p:DebugType=None
+          -p:DebugSymbols=false
+
+      - name: Create archive
+        shell: bash
+        run: |
+          mkdir -p dist
+          if [ "${{ matrix.extension }}" = "zip" ]; then
+            (cd publish/${{ matrix.name }} && zip -r "../../dist/MiniMaxFlow-${{ matrix.name }}.zip" .)
+          else
+            tar -C publish/${{ matrix.name }} -czf "dist/MiniMaxFlow-${{ matrix.name }}.tar.gz" .
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MiniMaxFlow-${{ matrix.name }}
+          path: dist/*
+          if-no-files-found: error
+
+  release:
+    name: Create GitHub Release
+    needs: package
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: release-assets
+          merge-multiple: true
+
+      - name: Create release and upload packages
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release delete "$TAG" --yes
+          fi
+          gh release create "$TAG" release-assets/* \
+            --title "$TAG" \
+            --generate-notes
