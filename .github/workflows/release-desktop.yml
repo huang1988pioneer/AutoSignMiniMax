@@ -19,16 +19,12 @@ jobs:
         include:
           - rid: win-x64
             name: windows-x64
-            extension: zip
           - rid: linux-x64
             name: linux-x64
-            extension: tar.gz
           - rid: osx-x64
             name: macos-x64
-            extension: tar.gz
           - rid: osx-arm64
             name: macos-arm64
-            extension: tar.gz
     steps:
       - uses: actions/checkout@v4
 
@@ -52,11 +48,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p dist
-          if [ "${{ matrix.extension }}" = "zip" ]; then
-            (cd publish/${{ matrix.name }} && zip -r "../../dist/MiniMaxFlow-${{ matrix.name }}.zip" .)
-          else
-            tar -C publish/${{ matrix.name }} -czf "dist/MiniMaxFlow-${{ matrix.name }}.tar.gz" .
-          fi
+          (cd publish/${{ matrix.name }} && zip -r "../../dist/MiniMaxFlow-${{ matrix.name }}.zip" .)
 
       - uses: actions/upload-artifact@v4
         with:
