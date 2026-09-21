@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-21T10:59:43.008Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/35587969459",
+  "generatedAt": "2026-09-21T19:10:28.277Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/35637997552",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -8,51 +8,54 @@
       "name": "huang1988pioneer",
       "label": "huang1988pioneer",
       "status": "checked_in",
-      "streak": 3,
-      "lastCheckInDate": "2026-09-21",
+      "streak": 4,
+      "lastCheckInDate": "2026-09-22",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
-        "2026-09-21"
+        "2026-09-21",
+        "2026-09-22"
       ],
-      "currentPoints": 1825.086,
-      "remainingCredits": 1825.086,
-      "siteStreak": 4,
-      "finishedAt": "2026-09-21T10:59:18.956Z"
+      "currentPoints": 2225.086,
+      "remainingCredits": 2225.086,
+      "siteStreak": 5,
+      "finishedAt": "2026-09-21T19:10:09.688Z"
     },
     {
       "account": 2,
       "name": "abuhg17",
       "label": "abuhg17",
       "status": "checked_in",
-      "streak": 3,
-      "lastCheckInDate": "2026-09-21",
+      "streak": 4,
+      "lastCheckInDate": "2026-09-22",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
-        "2026-09-21"
+        "2026-09-21",
+        "2026-09-22"
       ],
-      "currentPoints": 4303.75,
-      "remainingCredits": 4303.75,
-      "siteStreak": 5,
-      "finishedAt": "2026-09-21T10:58:26.254Z"
+      "currentPoints": 4703.75,
+      "remainingCredits": 4703.75,
+      "siteStreak": 6,
+      "finishedAt": "2026-09-21T19:10:00.117Z"
     },
     {
       "account": 3,
       "name": "goldshoot0720",
       "label": "goldshoot0720",
       "status": "checked_in",
-      "streak": 3,
-      "lastCheckInDate": "2026-09-21",
+      "streak": 4,
+      "lastCheckInDate": "2026-09-22",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
-        "2026-09-21"
+        "2026-09-21",
+        "2026-09-22"
       ],
-      "currentPoints": 748.4,
-      "remainingCredits": 748.4,
-      "siteStreak": 3,
-      "finishedAt": "2026-09-21T10:58:40.384Z"
+      "currentPoints": 1720.626,
+      "remainingCredits": 1720.626,
+      "siteStreak": 4,
+      "finishedAt": "2026-09-21T19:10:11.474Z"
     },
     {
       "account": 4,
@@ -449,8 +452,8 @@
   "streakSource": "recorded_check_ins",
   "summary": {
     "recorded": 33,
-    "max": 3,
+    "max": 4,
     "min": 0,
-    "average": 0.3
+    "average": 0.4
   }
 }
