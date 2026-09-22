@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-22T03:20:45.982Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/35678188622",
+  "generatedAt": "2026-09-22T05:30:07.385Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/35688748299",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
       "account": 1,
-      "name": "account-1",
-      "label": "account-1",
-      "status": "skipped",
+      "name": "huang1988pioneer",
+      "label": "huang1988pioneer",
+      "status": "checked_in",
       "streak": 4,
       "lastCheckInDate": "2026-09-22",
       "checkInDates": [
@@ -16,16 +16,16 @@
         "2026-09-21",
         "2026-09-22"
       ],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
+      "currentPoints": 2225.086,
+      "remainingCredits": 2225.086,
+      "siteStreak": 5,
+      "finishedAt": "2026-09-22T05:29:35.180Z"
     },
     {
       "account": 2,
-      "name": "account-2",
-      "label": "account-2",
-      "status": "skipped",
+      "name": "abuhg17",
+      "label": "abuhg17",
+      "status": "checked_in",
       "streak": 4,
       "lastCheckInDate": "2026-09-22",
       "checkInDates": [
@@ -34,16 +34,16 @@
         "2026-09-21",
         "2026-09-22"
       ],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
+      "currentPoints": 4703.75,
+      "remainingCredits": 4703.75,
+      "siteStreak": 6,
+      "finishedAt": "2026-09-22T05:29:50.406Z"
     },
     {
       "account": 3,
-      "name": "account-3",
-      "label": "account-3",
-      "status": "skipped",
+      "name": "goldshoot0720",
+      "label": "goldshoot0720",
+      "status": "checked_in",
       "streak": 4,
       "lastCheckInDate": "2026-09-22",
       "checkInDates": [
@@ -52,10 +52,10 @@
         "2026-09-21",
         "2026-09-22"
       ],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
+      "currentPoints": 1720.626,
+      "remainingCredits": 1720.626,
+      "siteStreak": 4,
+      "finishedAt": "2026-09-22T05:29:50.084Z"
     },
     {
       "account": 4,
