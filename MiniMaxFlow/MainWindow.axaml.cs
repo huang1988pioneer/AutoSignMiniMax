@@ -372,6 +372,7 @@ public partial class MainWindow : Window
             [1] = "huang1988pioneer",
             [2] = "abuhg17",
             [3] = "goldshoot0720",
+            [4] = "chbondg2",
         };
         if (!File.Exists(AliasFile)) return defaults;
 

@@ -151,7 +151,7 @@ jobs:
           echo "account_delays=${delays[*]}" >> "$GITHUB_OUTPUT"
 
   check-in:
-    name: check-in (${{ matrix.account }}) - ${{ vars[format('MINIMAX_ACCOUNT_NAME_{0}', matrix.account)] || (matrix.account == 1 && 'huang1988pioneer' || matrix.account == 2 && 'abuhg17' || matrix.account == 3 && 'goldshoot0720' || format('account-{0}', matrix.account)) }}
+    name: check-in (${{ matrix.account }}) - ${{ vars[format('MINIMAX_ACCOUNT_NAME_{0}', matrix.account)] || (matrix.account == 1 && 'huang1988pioneer' || matrix.account == 2 && 'abuhg17' || matrix.account == 3 && 'goldshoot0720' || matrix.account == 4 && 'chbondg2' || format('account-{0}', matrix.account)) }}
     needs: [random_start, validate-storage-states]
     runs-on: ubuntu-latest
     timeout-minutes: 12
@@ -161,7 +161,7 @@ jobs:
         account: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
     env:
       # MINIMAX_STORAGE_STATE_B64_1 belongs to huang1988pioneer.
-      MINIMAX_ACCOUNT_NAME: ${{ vars[format('MINIMAX_ACCOUNT_NAME_{0}', matrix.account)] || (matrix.account == 1 && 'huang1988pioneer' || matrix.account == 2 && 'abuhg17' || matrix.account == 3 && 'goldshoot0720' || format('account-{0}', matrix.account)) }}
+      MINIMAX_ACCOUNT_NAME: ${{ vars[format('MINIMAX_ACCOUNT_NAME_{0}', matrix.account)] || (matrix.account == 1 && 'huang1988pioneer' || matrix.account == 2 && 'abuhg17' || matrix.account == 3 && 'goldshoot0720' || matrix.account == 4 && 'chbondg2' || format('account-{0}', matrix.account)) }}
       MINIMAX_STORAGE_STATE_B64: ${{ secrets[format('MINIMAX_STORAGE_STATE_B64_{0}', matrix.account)] }}
       MINIMAX_COOKIE: ${{ secrets[format('MINIMAX_COOKIE_{0}', matrix.account)] }}
       MINIMAX_ACCOUNT_NUMBER: ${{ matrix.account }}
