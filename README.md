@@ -68,7 +68,7 @@ base64 -w0 auth.json
 
 每個帳號只要設定其中一種登入方式即可，且 Storage State 優先。workflow 會執行全部 33 個編號；未設定 Secret 的帳號會自動略過，不必連續編號。
 
-帳號別名可用 Variables `MINIMAX_ACCOUNT_NAME_1` … `MINIMAX_ACCOUNT_NAME_33` 指定；未設定時，編號 `1`、`2`、`3`、`4` 會顯示為 `huang1988pioneer`、`abuhg17`、`goldshoot0720`、`chbondg2`，其餘顯示為 `account-N`。
+帳號別名可用 Variables `MINIMAX_ACCOUNT_NAME_1` … `MINIMAX_ACCOUNT_NAME_33` 指定；未設定時，編號 `1`、`2`、`3`、`4`、`5`、`6` 會顯示為 `huang1988pioneer`、`abuhg17`、`goldshoot0720`、`chbondg2`、`feng33feng35feng3`、`fengtuprinfo`，其餘顯示為 `account-N`。
 
 請勿把 `auth.json`、Cookie 或任何登入憑證提交到儲存庫。
 
