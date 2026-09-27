@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-27T14:14:03.746Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/36325077019",
+  "generatedAt": "2026-09-27T14:18:24.264Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/36325345531",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -24,7 +24,7 @@
       "currentPoints": 4825.086,
       "remainingCredits": 4825.086,
       "siteStreak": 3,
-      "finishedAt": "2026-09-27T14:13:47.658Z"
+      "finishedAt": "2026-09-27T14:18:03.981Z"
     },
     {
       "account": 2,
@@ -47,7 +47,7 @@
       "currentPoints": 7903.75,
       "remainingCredits": 7903.75,
       "siteStreak": 4,
-      "finishedAt": "2026-09-27T14:13:32.308Z"
+      "finishedAt": "2026-09-27T14:17:58.224Z"
     },
     {
       "account": 3,
@@ -70,7 +70,7 @@
       "currentPoints": 4290.779,
       "remainingCredits": 4290.779,
       "siteStreak": 2,
-      "finishedAt": "2026-09-27T14:13:30.405Z"
+      "finishedAt": "2026-09-27T14:18:10.536Z"
     },
     {
       "account": 4,
@@ -85,12 +85,12 @@
       "currentPoints": 3182.804,
       "remainingCredits": 3182.804,
       "siteStreak": 1,
-      "finishedAt": "2026-09-27T14:13:26.980Z"
+      "finishedAt": "2026-09-27T14:17:44.757Z"
     },
     {
       "account": 5,
-      "name": "account-5",
-      "label": "account-5",
+      "name": "feng33feng35feng3",
+      "label": "feng33feng35feng3",
       "status": "checked_in",
       "streak": 1,
       "lastCheckInDate": "2026-09-27",
@@ -100,7 +100,7 @@
       "currentPoints": 400,
       "remainingCredits": 400,
       "siteStreak": 1,
-      "finishedAt": "2026-09-27T14:13:42.590Z"
+      "finishedAt": "2026-09-27T14:17:52.753Z"
     },
     {
       "account": 6,
@@ -115,7 +115,7 @@
       "currentPoints": 400,
       "remainingCredits": 400,
       "siteStreak": 1,
-      "finishedAt": "2026-09-27T14:13:29.976Z"
+      "finishedAt": "2026-09-27T14:18:03.683Z"
     },
     {
       "account": 7,
