@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-28T20:16:27.419Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/36475399173",
+  "generatedAt": "2026-09-29T01:11:14.499Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/36504516195",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -23,10 +23,10 @@
         "2026-09-28",
         "2026-09-29"
       ],
-      "currentPoints": 6825.086,
-      "remainingCredits": 6825.086,
-      "siteStreak": 4,
-      "finishedAt": "2026-09-28T20:15:27.626Z"
+      "currentPoints": 7625.086,
+      "remainingCredits": 7625.086,
+      "siteStreak": 5,
+      "finishedAt": "2026-09-29T01:09:49.478Z"
     },
     {
       "account": 2,
@@ -48,10 +48,10 @@
         "2026-09-28",
         "2026-09-29"
       ],
-      "currentPoints": 8200,
-      "remainingCredits": 8200,
-      "siteStreak": 5,
-      "finishedAt": "2026-09-28T20:15:33.037Z"
+      "currentPoints": 9000,
+      "remainingCredits": 9000,
+      "siteStreak": 6,
+      "finishedAt": "2026-09-29T01:09:49.038Z"
     },
     {
       "account": 3,
@@ -76,7 +76,7 @@
       "currentPoints": 6097.262,
       "remainingCredits": 6097.262,
       "siteStreak": 4,
-      "finishedAt": "2026-09-28T20:15:53.672Z"
+      "finishedAt": "2026-09-29T01:09:50.927Z"
     },
     {
       "account": 4,
@@ -90,10 +90,10 @@
         "2026-09-28",
         "2026-09-29"
       ],
-      "currentPoints": 3400,
-      "remainingCredits": 3400,
-      "siteStreak": 2,
-      "finishedAt": "2026-09-28T20:15:59.874Z"
+      "currentPoints": 4200,
+      "remainingCredits": 4200,
+      "siteStreak": 3,
+      "finishedAt": "2026-09-29T01:09:58.978Z"
     },
     {
       "account": 5,
@@ -107,10 +107,10 @@
         "2026-09-28",
         "2026-09-29"
       ],
-      "currentPoints": 1200,
-      "remainingCredits": 1200,
-      "siteStreak": 2,
-      "finishedAt": "2026-09-28T20:16:12.488Z"
+      "currentPoints": 2000,
+      "remainingCredits": 2000,
+      "siteStreak": 3,
+      "finishedAt": "2026-09-29T01:10:21.641Z"
     },
     {
       "account": 6,
@@ -124,10 +124,10 @@
         "2026-09-28",
         "2026-09-29"
       ],
-      "currentPoints": 1200,
-      "remainingCredits": 1200,
-      "siteStreak": 2,
-      "finishedAt": "2026-09-28T20:16:09.154Z"
+      "currentPoints": 2000,
+      "remainingCredits": 2000,
+      "siteStreak": 3,
+      "finishedAt": "2026-09-29T01:10:58.979Z"
     },
     {
       "account": 7,
