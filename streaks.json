@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T12:12:56.547Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/36854203344",
+  "generatedAt": "2026-10-01T19:02:09.034Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/36908199542",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -28,7 +28,7 @@
       "currentPoints": 8425.086,
       "remainingCredits": 8425.086,
       "siteStreak": 6,
-      "finishedAt": "2026-10-01T12:11:56.528Z"
+      "finishedAt": "2026-10-01T18:59:02.192Z"
     },
     {
       "account": 2,
@@ -55,14 +55,14 @@
       "currentPoints": 10600,
       "remainingCredits": 10600,
       "siteStreak": 0,
-      "finishedAt": "2026-10-01T12:11:46.256Z"
+      "finishedAt": "2026-10-01T18:55:30.203Z"
     },
     {
       "account": 3,
       "name": "goldshoot0720",
       "label": "goldshoot0720",
       "status": "failed",
-      "streak": 12,
+      "streak": 0,
       "lastCheckInDate": "2026-09-30",
       "checkInDates": [
         "2026-09-19",
@@ -80,8 +80,8 @@
       ],
       "currentPoints": 6897.262,
       "remainingCredits": 6897.262,
-      "siteStreak": 5,
-      "finishedAt": "2026-10-01T12:11:51.859Z"
+      "siteStreak": 0,
+      "finishedAt": "2026-10-01T18:55:51.691Z"
     },
     {
       "account": 4,
@@ -97,10 +97,10 @@
         "2026-09-30",
         "2026-10-01"
       ],
-      "currentPoints": 4800,
-      "remainingCredits": 4800,
+      "currentPoints": 4400,
+      "remainingCredits": 4400,
       "siteStreak": 4,
-      "finishedAt": "2026-10-01T12:12:06.376Z"
+      "finishedAt": "2026-10-01T18:55:53.748Z"
     },
     {
       "account": 5,
@@ -119,7 +119,7 @@
       "currentPoints": 4000,
       "remainingCredits": 4000,
       "siteStreak": 4,
-      "finishedAt": "2026-10-01T12:12:20.582Z"
+      "finishedAt": "2026-10-01T18:56:02.503Z"
     },
     {
       "account": 6,
@@ -138,7 +138,7 @@
       "currentPoints": 4000,
       "remainingCredits": 4000,
       "siteStreak": 4,
-      "finishedAt": "2026-10-01T12:12:39.496Z"
+      "finishedAt": "2026-10-01T19:00:46.894Z"
     },
     {
       "account": 7,
@@ -498,6 +498,6 @@
     "recorded": 33,
     "max": 13,
     "min": 0,
-    "average": 1.6
+    "average": 1.2
   }
 }
