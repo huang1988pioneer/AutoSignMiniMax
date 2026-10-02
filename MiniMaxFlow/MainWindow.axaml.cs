@@ -61,18 +61,14 @@ public partial class MainWindow : Window
 
             if (File.Exists(StateFile)) File.Delete(StateFile);
             SetStatus($"正在開啟 {browser.DisplayName}。請完成 MiniMax 登入，確認成功後關閉瀏覽器視窗。");
-            var codegenArguments = new List<string> { "playwright", "codegen" };
-            if (browser.Channel is not null)
-            {
-                codegenArguments.Add("--channel");
-                codegenArguments.Add(browser.Channel);
-            }
-            codegenArguments.Add("--save-storage");
-            codegenArguments.Add(Path.GetFileName(StateFile));
-            codegenArguments.Add(MiniMaxUrl);
+            // `playwright codegen` loses the login when the browser is quit instead of
+            // its window being closed, so a small script saves the state as it goes.
+            File.WriteAllText(Path.Combine(_workspace, LoginScriptName), LoginScript);
+            var loginArguments = new List<string> { LoginScriptName, Path.GetFileName(StateFile), MiniMaxUrl };
+            if (browser.Channel is not null) loginArguments.Add(browser.Channel);
             await RunProcessAsync(
-                NodeCommandPath("npx"),
-                codegenArguments,
+                NodeCommandPath("node"),
+                loginArguments,
                 _workspace,
                 cancellationToken: _lifetimeCancellation.Token);
 
@@ -365,6 +361,58 @@ public partial class MainWindow : Window
         "MiniMaxFlow",
         "account-aliases.json");
 
+    private const string LoginScriptName = "minimax-flow-login.mjs";
+
+    private const string LoginScript = """
+    import { rename, writeFile } from 'node:fs/promises';
+    import { chromium } from 'playwright';
+
+    // Usage: node minimax-flow-login.mjs <state-file> <url> [channel]
+    // The storage state is saved repeatedly while the browser is open, so closing
+    // the window or quitting the browser cannot lose a login that already happened.
+    const [stateFile, url, channel] = process.argv.slice(2);
+    const browser = await chromium.launch({ headless: false, ...(channel ? { channel } : {}) });
+    const context = await browser.newContext({ viewport: null });
+    let saved = false;
+    let pendingSave = Promise.resolve();
+
+    function saveState() {
+      pendingSave = pendingSave.then(async () => {
+        try {
+          const state = await context.storageState();
+          await writeFile(`${stateFile}.tmp`, JSON.stringify(state, null, 2));
+          await rename(`${stateFile}.tmp`, stateFile);
+          saved = true;
+        } catch {
+          // The browser is already gone; keep the last snapshot.
+        }
+      });
+      return pendingSave;
+    }
+
+    const finished = new Promise((resolve) => {
+      browser.on('disconnected', resolve);
+      context.on('page', (page) => page.on('close', async () => {
+        if (context.pages().length > 0) return;
+        await saveState();
+        resolve();
+      }));
+    });
+
+    const page = await context.newPage();
+    await page.goto(url).catch(() => {});
+    const timer = setInterval(saveState, 2000);
+    await finished;
+    clearInterval(timer);
+    await pendingSave;
+    await browser.close().catch(() => {});
+
+    if (!saved) {
+      console.error('沒有取得任何登入狀態。請重新執行，並在瀏覽器中完成登入後再關閉。');
+      process.exit(1);
+    }
+    """;
+
     private static string NpmCacheDirectory => Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
         "MiniMaxFlow",
@@ -636,9 +684,12 @@ public partial class MainWindow : Window
         var nodeDirectory = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),
             "nodejs");
-        var executableName = commandName.EndsWith(".cmd", StringComparison.OrdinalIgnoreCase)
-            ? commandName
-            : $"{commandName}.cmd";
+        var executableName = commandName switch
+        {
+            "node" => "node.exe",
+            _ when commandName.EndsWith(".cmd", StringComparison.OrdinalIgnoreCase) => commandName,
+            _ => $"{commandName}.cmd",
+        };
         var commandPath = Path.Combine(nodeDirectory, executableName);
         return File.Exists(commandPath) ? commandPath : commandName;
     }
