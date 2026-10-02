@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T11:59:28.995Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37003941449",
+  "generatedAt": "2026-10-02T13:50:31.979Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37015477102",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -29,7 +29,7 @@
       "currentPoints": 9225.086,
       "remainingCredits": 9225.086,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T11:59:10.844Z"
+      "finishedAt": "2026-10-02T13:49:42.704Z"
     },
     {
       "account": 2,
@@ -54,10 +54,10 @@
         "2026-10-01",
         "2026-10-02"
       ],
-      "currentPoints": 11400,
-      "remainingCredits": 11400,
+      "currentPoints": 10606.466,
+      "remainingCredits": 10606.466,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T11:59:09.142Z"
+      "finishedAt": "2026-10-02T13:49:28.603Z"
     },
     {
       "account": 3,
@@ -81,10 +81,10 @@
         "2026-09-30",
         "2026-10-02"
       ],
-      "currentPoints": 7697.262,
-      "remainingCredits": 7697.262,
+      "currentPoints": 0,
+      "remainingCredits": 0,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T11:59:12.815Z"
+      "finishedAt": "2026-10-02T13:49:33.842Z"
     },
     {
       "account": 4,
@@ -104,7 +104,7 @@
       "currentPoints": 5200,
       "remainingCredits": 5200,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T11:59:00.537Z"
+      "finishedAt": "2026-10-02T13:49:33.272Z"
     },
     {
       "account": 5,
@@ -124,7 +124,7 @@
       "currentPoints": 4800,
       "remainingCredits": 4800,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T11:59:12.910Z"
+      "finishedAt": "2026-10-02T13:49:31.420Z"
     },
     {
       "account": 6,
@@ -144,7 +144,7 @@
       "currentPoints": 4800,
       "remainingCredits": 4800,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T11:59:01.566Z"
+      "finishedAt": "2026-10-02T13:49:33.807Z"
     },
     {
       "account": 7,
