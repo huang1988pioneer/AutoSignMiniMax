@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T13:50:31.979Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37015477102",
+  "generatedAt": "2026-10-02T14:33:19.698Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37020510433",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -26,10 +26,10 @@
         "2026-10-01",
         "2026-10-02"
       ],
-      "currentPoints": 9225.086,
-      "remainingCredits": 9225.086,
+      "currentPoints": 8568.353,
+      "remainingCredits": 8568.353,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T13:49:42.704Z"
+      "finishedAt": "2026-10-02T14:33:07.288Z"
     },
     {
       "account": 2,
@@ -54,10 +54,10 @@
         "2026-10-01",
         "2026-10-02"
       ],
-      "currentPoints": 10606.466,
-      "remainingCredits": 10606.466,
+      "currentPoints": 0,
+      "remainingCredits": 0,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T13:49:28.603Z"
+      "finishedAt": "2026-10-02T14:32:56.750Z"
     },
     {
       "account": 3,
@@ -84,7 +84,7 @@
       "currentPoints": 0,
       "remainingCredits": 0,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T13:49:33.842Z"
+      "finishedAt": "2026-10-02T14:33:05.656Z"
     },
     {
       "account": 4,
@@ -104,7 +104,7 @@
       "currentPoints": 5200,
       "remainingCredits": 5200,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T13:49:33.272Z"
+      "finishedAt": "2026-10-02T14:33:00.192Z"
     },
     {
       "account": 5,
@@ -124,7 +124,7 @@
       "currentPoints": 4800,
       "remainingCredits": 4800,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T13:49:31.420Z"
+      "finishedAt": "2026-10-02T14:32:49.635Z"
     },
     {
       "account": 6,
@@ -144,7 +144,7 @@
       "currentPoints": 4800,
       "remainingCredits": 4800,
       "siteStreak": 1,
-      "finishedAt": "2026-10-02T13:49:33.807Z"
+      "finishedAt": "2026-10-02T14:33:00.437Z"
     },
     {
       "account": 7,
