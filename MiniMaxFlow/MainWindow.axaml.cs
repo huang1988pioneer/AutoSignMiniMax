@@ -60,7 +60,7 @@ public partial class MainWindow : Window
             var browser = await ChooseLoginBrowserAsync(_lifetimeCancellation.Token);
 
             if (File.Exists(StateFile)) File.Delete(StateFile);
-            SetStatus($"正在開啟 {browser.DisplayName}。請完成 MiniMax 登入，確認成功後關閉瀏覽器視窗。");
+            SetStatus($"已開啟 {browser.DisplayName}。請在瀏覽器中完成 MiniMax 登入，看到 MiniMax Agent 首頁後等約 5 秒，再關閉瀏覽器（登入狀態會自動儲存）。");
             // `playwright codegen` loses the login when the browser is quit instead of
             // its window being closed, so a small script saves the state as it goes.
             File.WriteAllText(Path.Combine(_workspace, LoginScriptName), LoginScript);
@@ -88,8 +88,11 @@ public partial class MainWindow : Window
         }
         catch (Exception exception)
         {
-            StatusText.Text = $"流程未完成：{exception.Message}";
-            ResultText.Text = "沒有複製任何登入狀態。請修正問題後重新執行。";
+            var hint = TroubleshootingHint(exception);
+            StatusText.Text = hint is null
+                ? $"流程未完成：{exception.Message}"
+                : $"流程未完成。{Environment.NewLine}{Environment.NewLine}建議處理方式：{hint}{Environment.NewLine}{Environment.NewLine}詳細錯誤：{exception.Message}";
+            ResultText.Text = "沒有複製任何登入狀態。請依下方「建議處理方式」修正後重新執行。";
         }
         finally
         {
@@ -439,6 +442,40 @@ public partial class MainWindow : Window
         {
             return defaults;
         }
+    }
+
+    private string? TroubleshootingHint(Exception exception)
+    {
+        var message = exception.Message;
+        if (message.Contains("EACCES", StringComparison.Ordinal) || message.Contains("EPERM", StringComparison.Ordinal))
+        {
+            var ownedPaths = new[]
+                {
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".npm"),
+                    NpmCacheDirectory,
+                    _workspace,
+                }
+                .Where(Directory.Exists)
+                .Select(path => $"\"{path}\"");
+            return OperatingSystem.IsWindows()
+                ? $"npm 沒有寫入權限。請關閉本工具，以一般使用者身分重新開啟後再試；若仍失敗，請刪除 {NpmCacheDirectory} 資料夾後重試。"
+                : "npm 資料夾被系統管理員（root）佔用。請開啟「終端機」，貼上並執行下列指令（需要輸入電腦登入密碼，輸入時畫面不會顯示）：" +
+                  $"{Environment.NewLine}sudo chown -R $(id -u):$(id -g) {string.Join(' ', ownedPaths)}{Environment.NewLine}" +
+                  "執行完成後，回到本工具再按一次「開始登入並建立狀態」。";
+        }
+
+        if (exception is System.ComponentModel.Win32Exception)
+            return "找不到 Node.js。請到 https://nodejs.org 下載並安裝 LTS 版本，安裝後完全關閉並重新開啟本工具。";
+
+        if (message.Contains("沒有取得任何登入狀態", StringComparison.Ordinal))
+            return "瀏覽器在登入完成前就被關閉。請重新執行，看到 MiniMax Agent 首頁後多等約 5 秒再關閉瀏覽器。";
+
+        if (exception is TimeoutException || exception.InnerException is TimeoutException ||
+            message.Contains("ENOTFOUND", StringComparison.Ordinal) || message.Contains("ETIMEDOUT", StringComparison.Ordinal) ||
+            message.Contains("ECONNRESET", StringComparison.Ordinal))
+            return "網路連線有問題。請確認網路正常（必要時暫時關閉 VPN／Proxy）後再試一次。";
+
+        return null;
     }
 
     private async Task EnsurePlaywrightAsync(CancellationToken cancellationToken)

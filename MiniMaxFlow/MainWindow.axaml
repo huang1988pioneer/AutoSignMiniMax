@@ -140,7 +140,25 @@
             <TextBlock Classes="stepNumber" Text="02" VerticalAlignment="Top" />
             <StackPanel Grid.Column="1" Spacing="11">
               <TextBlock Text="執行登入流程" FontWeight="SemiBold" FontSize="16" />
-              <TextBlock Classes="muted" Text="按下按鈕後會開啟瀏覽器。請自行完成登入，確認已進入 MiniMax Agent 首頁後關閉瀏覽器；不要在這個工具中貼入密碼或驗證碼。" TextWrapping="Wrap" />
+              <TextBlock Classes="muted" Text="按下按鈕後會開啟瀏覽器。不要在這個工具中貼入密碼或驗證碼。" TextWrapping="Wrap" />
+              <Border Background="#F4F8F7" CornerRadius="8" Padding="14,12">
+                <StackPanel Spacing="6">
+                  <TextBlock Text="操作步驟" FontWeight="SemiBold" Foreground="#172B36" FontSize="13" />
+                  <TextBlock Classes="muted" FontSize="13" TextWrapping="Wrap" Text="1. 按下「開始登入並建立狀態」。第一次使用會先安裝元件，約需 1～3 分鐘，請耐心等候。" />
+                  <TextBlock Classes="muted" FontSize="13" TextWrapping="Wrap" Text="2. 在開啟的瀏覽器中自行登入 MiniMax（Google、OTP、CAPTCHA 都在瀏覽器中完成）。" />
+                  <TextBlock Classes="muted" FontSize="13" TextWrapping="Wrap" Text="3. 確認已看到 MiniMax Agent 首頁，並等候約 5 秒，讓工具自動儲存登入狀態。" />
+                  <TextBlock Classes="muted" FontSize="13" TextWrapping="Wrap" Text="4. 關閉瀏覽器視窗即可（按視窗的關閉按鈕或 ⌘Q／Alt+F4 結束瀏覽器都可以）。" />
+                </StackPanel>
+              </Border>
+              <Border Background="#FFF8E6" CornerRadius="8" Padding="14,12">
+                <StackPanel Spacing="6">
+                  <TextBlock Text="遇到問題？" FontWeight="SemiBold" Foreground="#7A4B00" FontSize="13" />
+                  <TextBlock Foreground="#6B4E16" FontSize="12" TextWrapping="Wrap" Text="• 出現「EACCES」或「權限」錯誤：npm 資料夾被系統管理員（root）佔用。下方狀態列會顯示要在「終端機」執行的修正指令，執行後再按一次開始。" />
+                  <TextBlock Foreground="#6B4E16" FontSize="12" TextWrapping="Wrap" Text="• 出現「沒有取得任何登入狀態」：瀏覽器在登入完成前就被關閉。請重新執行，登入後多等幾秒再關閉。" />
+                  <TextBlock Foreground="#6B4E16" FontSize="12" TextWrapping="Wrap" Text="• 找不到 node／npm：請先安裝 Node.js（nodejs.org 的 LTS 版本），安裝後重新開啟本工具。" />
+                  <TextBlock Foreground="#6B4E16" FontSize="12" TextWrapping="Wrap" Text="• 安裝逾時或網路錯誤：請確認網路可連線（必要時關閉 VPN／Proxy）後重試。" />
+                </StackPanel>
+              </Border>
               <CheckBox x:Name="AutoPublishActionsCheckBox" IsChecked="True" Content="登入完成後自動同步到 GitHub Actions" />
               <Button x:Name="RunFlowButton" Classes="primary" HorizontalAlignment="Left" Click="RunFlowButton_OnClick">開始登入並建立狀態</Button>
             </StackPanel>
@@ -164,7 +182,7 @@
         </Border>
 
         <Border Background="#EAF1F3" CornerRadius="8" Padding="14">
-          <TextBlock x:Name="StatusText" Text="準備就緒。" Foreground="#29434A" TextWrapping="Wrap" />
+          <SelectableTextBlock x:Name="StatusText" Text="準備就緒。" Foreground="#29434A" TextWrapping="Wrap" />
         </Border>
         </StackPanel>
       </StackPanel>
