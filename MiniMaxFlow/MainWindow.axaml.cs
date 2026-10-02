@@ -365,6 +365,11 @@ public partial class MainWindow : Window
         "MiniMaxFlow",
         "account-aliases.json");
 
+    private static string NpmCacheDirectory => Path.Combine(
+        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+        "MiniMaxFlow",
+        "npm-cache");
+
     private static Dictionary<int, string> LoadAccountAliases()
     {
         var defaults = new Dictionary<int, string>
@@ -534,6 +539,10 @@ public partial class MainWindow : Window
         };
         foreach (var argument in arguments)
             process.StartInfo.ArgumentList.Add(argument);
+        // A ~/.npm left root-owned by an earlier `sudo npm` makes npm fail with EACCES,
+        // so npm/npx get a cache folder that this app creates and owns.
+        Directory.CreateDirectory(NpmCacheDirectory);
+        process.StartInfo.Environment["npm_config_cache"] = NpmCacheDirectory;
 
         cancellationToken.ThrowIfCancellationRequested();
         if (!process.Start()) throw new InvalidOperationException($"無法啟動 {fileName}。");
