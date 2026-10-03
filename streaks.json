@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T10:40:40.545Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37115368002",
+  "generatedAt": "2026-10-03T17:42:11.287Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37138415561",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -30,7 +30,7 @@
       "currentPoints": 0,
       "remainingCredits": 0,
       "siteStreak": 1,
-      "finishedAt": "2026-10-03T10:39:45.773Z"
+      "finishedAt": "2026-10-03T17:41:52.655Z"
     },
     {
       "account": 2,
@@ -59,15 +59,15 @@
       "currentPoints": 0,
       "remainingCredits": 0,
       "siteStreak": 1,
-      "finishedAt": "2026-10-03T10:39:53.704Z"
+      "finishedAt": "2026-10-03T17:41:41.699Z"
     },
     {
       "account": 3,
       "name": "goldshoot0720",
       "label": "goldshoot0720",
       "status": "checked_in",
-      "streak": 2,
-      "lastCheckInDate": "2026-10-03",
+      "streak": 3,
+      "lastCheckInDate": "2026-10-04",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
@@ -82,12 +82,13 @@
         "2026-09-29",
         "2026-09-30",
         "2026-10-02",
-        "2026-10-03"
+        "2026-10-03",
+        "2026-10-04"
       ],
       "currentPoints": 800,
       "remainingCredits": 800,
       "siteStreak": 2,
-      "finishedAt": "2026-10-03T10:39:10.719Z"
+      "finishedAt": "2026-10-03T17:40:53.835Z"
     },
     {
       "account": 4,
@@ -108,15 +109,15 @@
       "currentPoints": 0,
       "remainingCredits": 0,
       "siteStreak": 1,
-      "finishedAt": "2026-10-03T10:40:27.064Z"
+      "finishedAt": "2026-10-03T17:41:59.749Z"
     },
     {
       "account": 5,
       "name": "feng33feng35feng3",
       "label": "feng33feng35feng3",
       "status": "checked_in",
-      "streak": 7,
-      "lastCheckInDate": "2026-10-03",
+      "streak": 8,
+      "lastCheckInDate": "2026-10-04",
       "checkInDates": [
         "2026-09-27",
         "2026-09-28",
@@ -124,20 +125,21 @@
         "2026-09-30",
         "2026-10-01",
         "2026-10-02",
-        "2026-10-03"
+        "2026-10-03",
+        "2026-10-04"
       ],
       "currentPoints": 800,
       "remainingCredits": 800,
       "siteStreak": 2,
-      "finishedAt": "2026-10-03T10:39:18.331Z"
+      "finishedAt": "2026-10-03T17:41:22.131Z"
     },
     {
       "account": 6,
       "name": "fengtuprinfo",
       "label": "fengtuprinfo",
       "status": "checked_in",
-      "streak": 7,
-      "lastCheckInDate": "2026-10-03",
+      "streak": 8,
+      "lastCheckInDate": "2026-10-04",
       "checkInDates": [
         "2026-09-27",
         "2026-09-28",
@@ -145,12 +147,13 @@
         "2026-09-30",
         "2026-10-01",
         "2026-10-02",
-        "2026-10-03"
+        "2026-10-03",
+        "2026-10-04"
       ],
       "currentPoints": 800,
       "remainingCredits": 800,
       "siteStreak": 2,
-      "finishedAt": "2026-10-03T10:39:38.623Z"
+      "finishedAt": "2026-10-03T17:41:35.878Z"
     },
     {
       "account": 7,
@@ -510,6 +513,6 @@
     "recorded": 33,
     "max": 15,
     "min": 0,
-    "average": 1.6
+    "average": 1.7
   }
 }
