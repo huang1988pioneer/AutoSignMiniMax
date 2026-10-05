@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-05T12:36:54.217Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37306079536",
+  "generatedAt": "2026-10-05T21:07:44.140Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37372391996",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
       "account": 1,
-      "name": "huang1988pioneer",
-      "label": "huang1988pioneer",
-      "status": "failed",
+      "name": "account-1",
+      "label": "account-1",
+      "status": "skipped",
       "streak": 0,
       "lastCheckInDate": "2026-10-03",
       "checkInDates": [
@@ -27,16 +27,16 @@
         "2026-10-02",
         "2026-10-03"
       ],
-      "currentPoints": 0,
-      "remainingCredits": 0,
-      "siteStreak": 0,
-      "finishedAt": "2026-10-05T12:36:13.094Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 2,
-      "name": "abuhg17",
-      "label": "abuhg17",
-      "status": "failed",
+      "name": "account-2",
+      "label": "account-2",
+      "status": "skipped",
       "streak": 0,
       "lastCheckInDate": "2026-10-03",
       "checkInDates": [
@@ -56,16 +56,16 @@
         "2026-10-02",
         "2026-10-03"
       ],
-      "currentPoints": 0,
-      "remainingCredits": 0,
-      "siteStreak": 0,
-      "finishedAt": "2026-10-05T12:36:15.147Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 3,
-      "name": "goldshoot0720",
-      "label": "goldshoot0720",
-      "status": "checked_in",
+      "name": "account-3",
+      "label": "account-3",
+      "status": "skipped",
       "streak": 4,
       "lastCheckInDate": "2026-10-05",
       "checkInDates": [
@@ -86,16 +86,16 @@
         "2026-10-04",
         "2026-10-05"
       ],
-      "currentPoints": 3600,
-      "remainingCredits": 3600,
-      "siteStreak": 4,
-      "finishedAt": "2026-10-05T12:35:47.991Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 4,
-      "name": "chbondg2",
-      "label": "chbondg2",
-      "status": "failed",
+      "name": "account-4",
+      "label": "account-4",
+      "status": "skipped",
       "streak": 0,
       "lastCheckInDate": "2026-10-03",
       "checkInDates": [
@@ -107,16 +107,16 @@
         "2026-10-02",
         "2026-10-03"
       ],
-      "currentPoints": 0,
-      "remainingCredits": 0,
-      "siteStreak": 0,
-      "finishedAt": "2026-10-05T12:36:39.526Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 5,
-      "name": "feng33feng35feng3",
-      "label": "feng33feng35feng3",
-      "status": "checked_in",
+      "name": "account-5",
+      "label": "account-5",
+      "status": "skipped",
       "streak": 9,
       "lastCheckInDate": "2026-10-05",
       "checkInDates": [
@@ -130,16 +130,16 @@
         "2026-10-04",
         "2026-10-05"
       ],
-      "currentPoints": 3600,
-      "remainingCredits": 3600,
-      "siteStreak": 4,
-      "finishedAt": "2026-10-05T12:35:52.019Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 6,
-      "name": "fengtuprinfo",
-      "label": "fengtuprinfo",
-      "status": "checked_in",
+      "name": "account-6",
+      "label": "account-6",
+      "status": "skipped",
       "streak": 9,
       "lastCheckInDate": "2026-10-05",
       "checkInDates": [
@@ -153,10 +153,10 @@
         "2026-10-04",
         "2026-10-05"
       ],
-      "currentPoints": 3600,
-      "remainingCredits": 3600,
-      "siteStreak": 4,
-      "finishedAt": "2026-10-05T12:36:31.792Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 7,
