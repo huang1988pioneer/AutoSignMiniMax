@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-07T07:30:41.794Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37586021275",
+  "generatedAt": "2026-10-07T08:20:36.293Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37592876045",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
       "account": 1,
       "name": "huang1988pioneer",
       "label": "huang1988pioneer",
-      "status": "failed",
-      "streak": 0,
-      "lastCheckInDate": "2026-10-03",
+      "status": "checked_in",
+      "streak": 1,
+      "lastCheckInDate": "2026-10-07",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
@@ -25,12 +25,13 @@
         "2026-09-30",
         "2026-10-01",
         "2026-10-02",
-        "2026-10-03"
+        "2026-10-03",
+        "2026-10-07"
       ],
-      "currentPoints": 0,
-      "remainingCredits": 0,
-      "siteStreak": 0,
-      "finishedAt": "2026-10-07T07:29:51.789Z"
+      "currentPoints": 800,
+      "remainingCredits": 800,
+      "siteStreak": 1,
+      "finishedAt": "2026-10-07T08:19:18.931Z"
     },
     {
       "account": 2,
@@ -59,7 +60,7 @@
       "currentPoints": 0,
       "remainingCredits": 0,
       "siteStreak": 0,
-      "finishedAt": "2026-10-07T07:30:11.472Z"
+      "finishedAt": "2026-10-07T08:20:22.496Z"
     },
     {
       "account": 3,
@@ -91,15 +92,15 @@
       "currentPoints": 5200,
       "remainingCredits": 5200,
       "siteStreak": 6,
-      "finishedAt": "2026-10-07T07:29:28.545Z"
+      "finishedAt": "2026-10-07T08:19:25.095Z"
     },
     {
       "account": 4,
       "name": "chbondg2",
       "label": "chbondg2",
-      "status": "failed",
-      "streak": 0,
-      "lastCheckInDate": "2026-10-03",
+      "status": "checked_in",
+      "streak": 1,
+      "lastCheckInDate": "2026-10-07",
       "checkInDates": [
         "2026-09-27",
         "2026-09-28",
@@ -107,12 +108,13 @@
         "2026-09-30",
         "2026-10-01",
         "2026-10-02",
-        "2026-10-03"
+        "2026-10-03",
+        "2026-10-07"
       ],
-      "currentPoints": 0,
-      "remainingCredits": 0,
-      "siteStreak": 0,
-      "finishedAt": "2026-10-07T07:30:27.978Z"
+      "currentPoints": 800,
+      "remainingCredits": 800,
+      "siteStreak": 1,
+      "finishedAt": "2026-10-07T08:19:16.756Z"
     },
     {
       "account": 5,
@@ -137,7 +139,7 @@
       "currentPoints": 5200,
       "remainingCredits": 5200,
       "siteStreak": 6,
-      "finishedAt": "2026-10-07T07:29:37.109Z"
+      "finishedAt": "2026-10-07T08:19:20.204Z"
     },
     {
       "account": 6,
@@ -162,7 +164,7 @@
       "currentPoints": 5200,
       "remainingCredits": 5200,
       "siteStreak": 6,
-      "finishedAt": "2026-10-07T07:30:08.609Z"
+      "finishedAt": "2026-10-07T08:19:18.234Z"
     },
     {
       "account": 7,
@@ -522,6 +524,6 @@
     "recorded": 33,
     "max": 11,
     "min": 0,
-    "average": 0.8
+    "average": 0.9
   }
 }
