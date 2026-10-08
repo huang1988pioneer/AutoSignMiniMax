@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-08T10:41:33.689Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37761195858",
+  "generatedAt": "2026-10-08T12:23:33.643Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/37771676674",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -32,7 +32,7 @@
       "currentPoints": 1200,
       "remainingCredits": 1200,
       "siteStreak": 2,
-      "finishedAt": "2026-10-08T10:40:23.919Z"
+      "finishedAt": "2026-10-08T12:22:02.351Z"
     },
     {
       "account": 2,
@@ -63,7 +63,7 @@
       "currentPoints": 1200,
       "remainingCredits": 1200,
       "siteStreak": 2,
-      "finishedAt": "2026-10-08T10:40:36.895Z"
+      "finishedAt": "2026-10-08T12:22:07.490Z"
     },
     {
       "account": 3,
@@ -93,10 +93,10 @@
         "2026-10-07",
         "2026-10-08"
       ],
-      "currentPoints": 6129.225,
-      "remainingCredits": 6129.225,
+      "currentPoints": 4641.357,
+      "remainingCredits": 4641.357,
       "siteStreak": 7,
-      "finishedAt": "2026-10-08T10:41:05.290Z"
+      "finishedAt": "2026-10-08T12:22:18.387Z"
     },
     {
       "account": 4,
@@ -119,7 +119,7 @@
       "currentPoints": 1200,
       "remainingCredits": 1200,
       "siteStreak": 2,
-      "finishedAt": "2026-10-08T10:41:06.472Z"
+      "finishedAt": "2026-10-08T12:22:46.580Z"
     },
     {
       "account": 5,
@@ -145,7 +145,7 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 7,
-      "finishedAt": "2026-10-08T10:40:59.385Z"
+      "finishedAt": "2026-10-08T12:22:30.439Z"
     },
     {
       "account": 6,
@@ -171,7 +171,7 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 7,
-      "finishedAt": "2026-10-08T10:41:17.225Z"
+      "finishedAt": "2026-10-08T12:23:16.535Z"
     },
     {
       "account": 7,
