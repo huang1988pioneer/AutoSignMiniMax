@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-21T17:50:58.381Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/39646711635",
+  "generatedAt": "2026-10-22T00:36:16.044Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/39695694845",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -44,7 +44,7 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 0,
-      "finishedAt": "2026-10-21T17:49:58.101Z"
+      "finishedAt": "2026-10-22T00:35:05.977Z"
     },
     {
       "account": 2,
@@ -87,13 +87,13 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 0,
-      "finishedAt": "2026-10-21T17:50:03.840Z"
+      "finishedAt": "2026-10-22T00:35:29.279Z"
     },
     {
       "account": 3,
       "name": "goldshoot0720",
       "label": "goldshoot0720",
-      "status": "checked_in",
+      "status": "failed",
       "streak": 21,
       "lastCheckInDate": "2026-10-22",
       "checkInDates": [
@@ -134,7 +134,7 @@
       "currentPoints": 3511.455,
       "remainingCredits": 3511.455,
       "siteStreak": 6,
-      "finishedAt": "2026-10-21T17:49:29.634Z"
+      "finishedAt": "2026-10-22T00:35:29.069Z"
     },
     {
       "account": 4,
@@ -169,7 +169,7 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 0,
-      "finishedAt": "2026-10-21T17:50:34.427Z"
+      "finishedAt": "2026-10-22T00:35:25.420Z"
     },
     {
       "account": 5,
@@ -207,7 +207,7 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 0,
-      "finishedAt": "2026-10-21T17:50:26.728Z"
+      "finishedAt": "2026-10-22T00:35:57.151Z"
     },
     {
       "account": 6,
@@ -245,7 +245,7 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 0,
-      "finishedAt": "2026-10-21T17:50:46.001Z"
+      "finishedAt": "2026-10-22T00:35:49.590Z"
     },
     {
       "account": 7,
