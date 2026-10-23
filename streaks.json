@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-23T09:00:25.678Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/39923526945",
+  "generatedAt": "2026-10-23T10:41:37.652Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/39933544581",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -44,7 +44,7 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 0,
-      "finishedAt": "2026-10-23T08:59:27.469Z"
+      "finishedAt": "2026-10-23T10:30:43.589Z"
     },
     {
       "account": 2,
@@ -87,13 +87,13 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 0,
-      "finishedAt": "2026-10-23T08:59:40.265Z"
+      "finishedAt": "2026-10-23T10:30:38.574Z"
     },
     {
       "account": 3,
-      "name": "goldshoot0720",
-      "label": "goldshoot0720",
-      "status": "failed",
+      "name": "account-3",
+      "label": "account-3",
+      "status": "skipped",
       "streak": 21,
       "lastCheckInDate": "2026-10-22",
       "checkInDates": [
@@ -131,10 +131,10 @@
         "2026-10-21",
         "2026-10-22"
       ],
-      "currentPoints": 3511.455,
-      "remainingCredits": 3511.455,
-      "siteStreak": 0,
-      "finishedAt": "2026-10-23T08:59:44.513Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 4,
@@ -169,7 +169,7 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 0,
-      "finishedAt": "2026-10-23T08:59:53.051Z"
+      "finishedAt": "2026-10-23T10:40:19.745Z"
     },
     {
       "account": 5,
@@ -207,7 +207,7 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 0,
-      "finishedAt": "2026-10-23T08:59:46.793Z"
+      "finishedAt": "2026-10-23T10:31:00.575Z"
     },
     {
       "account": 6,
@@ -245,7 +245,7 @@
       "currentPoints": 6200,
       "remainingCredits": 6200,
       "siteStreak": 0,
-      "finishedAt": "2026-10-23T09:00:13.289Z"
+      "finishedAt": "2026-10-23T10:31:25.578Z"
     },
     {
       "account": 7,
