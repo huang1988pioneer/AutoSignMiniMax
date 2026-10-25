@@ -25,22 +25,19 @@ try {
   console.log("READY");
 
   let latest = null;
+  let disconnected = false;
+  browser.once("disconnected", () => {
+    disconnected = true;
+  });
   const remember = async () => {
-    try {
-      latest = await context.storageState();
-    } catch {
-      // The window is already closing.
-    }
+    const snapshot = await snapshotOpenPages(context);
+    if (snapshot) latest = snapshot;
   };
 
-  while (browser.isConnected()) {
+  while (browser.isConnected() && !disconnected) {
     await remember();
-    if (context.pages().length === 0) break;
-    const closed = await Promise.race([
-      once(browser, "disconnected").then(() => true),
-      delay(1000).then(() => false),
-    ]);
-    if (closed) break;
+    if (!context.pages().some((page) => page.url().startsWith("http"))) break;
+    await delay(2000);
   }
   await remember();
   if (!latest) throw new Error("瀏覽器已關閉，但沒有取得登入狀態。");
@@ -89,16 +86,45 @@ async function openLoginPage(context, targetUrl) {
 
 async function focusPage(page) {
   await page.bringToFront();
+}
+
+async function snapshotOpenPages(context) {
+  let cookies = [];
   try {
-    const session = await page.context().newCDPSession(page);
-    const { windowId } = await session.send("Browser.getWindowForTarget");
-    await session.send("Browser.setWindowBounds", {
-      windowId,
-      bounds: { windowState: "normal", width: 1200, height: 900 },
-    });
+    cookies = await context.cookies();
   } catch {
-    // The page is already visible when the browser rejects the resize.
+    return null;
   }
+
+  const origins = new Map();
+  for (const page of context.pages()) {
+    if (!page.url().startsWith("http")) continue;
+    let origin;
+    try {
+      origin = new URL(page.url()).origin;
+    } catch {
+      continue;
+    }
+    try {
+      const localStorage = await page.evaluate(() => {
+        const items = [];
+        for (let index = 0; index < window.localStorage.length; index += 1) {
+          const name = window.localStorage.key(index);
+          if (!name) continue;
+          items.push({ name, value: window.localStorage.getItem(name) ?? "" });
+        }
+        return items;
+      });
+      if (localStorage.length > 0) origins.set(origin, localStorage);
+    } catch {
+      // The page is navigating. Keep the previous snapshot for this origin.
+    }
+  }
+
+  return {
+    cookies,
+    origins: [...origins].map(([origin, localStorage]) => ({ origin, localStorage })),
+  };
 }
 
 async function stopLoginBrowser(connectedBrowser, profileDir) {
@@ -150,10 +176,6 @@ async function waitForDebugger(port) {
 
 function delay(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
-}
-
-function once(emitter, eventName) {
-  return new Promise((resolve) => emitter.once(eventName, resolve));
 }
 
 function onceExit(child) {
