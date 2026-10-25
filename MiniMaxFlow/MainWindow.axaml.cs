@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Text;
 using System.Text.Json;
 using Avalonia;
 using Avalonia.Controls;
@@ -17,6 +18,7 @@ public partial class MainWindow : Window
     private readonly Dictionary<int, TextBox> _aliasInputs = new();
     private readonly Dictionary<int, string> _accountAliases = LoadAccountAliases();
     private readonly CancellationTokenSource _lifetimeCancellation = new();
+    private bool _loginInProgress;
 
     public MainWindow()
     {
@@ -51,29 +53,34 @@ public partial class MainWindow : Window
 
     private async void RunFlowButton_OnClick(object? sender, RoutedEventArgs e)
     {
+        if (_loginInProgress) return;
+
+        _loginInProgress = true;
         RunFlowButton.IsEnabled = false;
+        RunFlowButton.Content = "正在開啟瀏覽器…";
         CopyStateButton.IsEnabled = false;
         CopySecretNameButton.IsEnabled = false;
+        SetStatus("正在開啟獨立的登入瀏覽器，不會使用你目前正在看的視窗。");
         try
         {
             await EnsurePlaywrightAsync(_lifetimeCancellation.Token);
             var browser = await ChooseLoginBrowserAsync(_lifetimeCancellation.Token);
 
             if (File.Exists(StateFile)) File.Delete(StateFile);
-            SetStatus($"正在開啟 {browser.DisplayName}。請完成 MiniMax 登入，確認成功後關閉瀏覽器視窗。");
-            var codegenArguments = new List<string> { "playwright", "codegen" };
-            if (browser.Channel is not null)
-            {
-                codegenArguments.Add("--channel");
-                codegenArguments.Add(browser.Channel);
-            }
-            codegenArguments.Add("--save-storage");
-            codegenArguments.Add(Path.GetFileName(StateFile));
-            codegenArguments.Add(MiniMaxUrl);
+            SetStatus($"正在開啟 {browser.DisplayName}。視窗出現後請完成 MiniMax 登入，再關閉該視窗。");
             await RunProcessAsync(
-                NodeCommandPath("npx"),
-                codegenArguments,
+                NodeCommandPath("node"),
+                ["scripts/capture-login.mjs", MiniMaxUrl, StateFile, browser.Channel ?? "chromium"],
                 _workspace,
+                onOutputLine: line =>
+                {
+                    if (line != "READY") return;
+                    Dispatcher.UIThread.Post(() =>
+                    {
+                        RunFlowButton.Content = "請在瀏覽器完成登入，然後關閉視窗";
+                        StatusText.Text = $"{browser.DisplayName} 已開啟。請完成 MiniMax 登入，確認進入首頁後關閉這個新視窗。";
+                    });
+                },
                 cancellationToken: _lifetimeCancellation.Token);
 
             if (!File.Exists(StateFile))
@@ -97,8 +104,12 @@ public partial class MainWindow : Window
         }
         finally
         {
+            _loginInProgress = false;
             if (!_lifetimeCancellation.IsCancellationRequested)
+            {
+                RunFlowButton.Content = "開始登入並建立狀態";
                 RunFlowButton.IsEnabled = true;
+            }
         }
     }
 
@@ -518,6 +529,7 @@ public partial class MainWindow : Window
         string workingDirectory,
         TimeSpan? timeout = null,
         Action<TimeSpan>? waitingUpdate = null,
+        Action<string>? onOutputLine = null,
         CancellationToken cancellationToken = default)
     {
         using var process = new Process
@@ -537,7 +549,7 @@ public partial class MainWindow : Window
 
         cancellationToken.ThrowIfCancellationRequested();
         if (!process.Start()) throw new InvalidOperationException($"無法啟動 {fileName}。");
-        var standardOutput = process.StandardOutput.ReadToEndAsync();
+        var standardOutput = ReadOutputLinesAsync(process.StandardOutput, onOutputLine);
         var standardError = process.StandardError.ReadToEndAsync();
         var processExit = process.WaitForExitAsync();
         var elapsed = Stopwatch.StartNew();
@@ -583,6 +595,18 @@ public partial class MainWindow : Window
             var details = SummarizeProcessFailure(error, output);
             throw new InvalidOperationException(
                 $"{fileName} 執行失敗（結束碼 {process.ExitCode}）。{details}");
+        }
+    }
+
+    private static async Task<string> ReadOutputLinesAsync(StreamReader reader, Action<string>? onLine)
+    {
+        var output = new StringBuilder();
+        while (true)
+        {
+            var line = await reader.ReadLineAsync();
+            if (line is null) return output.ToString();
+            output.AppendLine(line);
+            onLine?.Invoke(line);
         }
     }
 

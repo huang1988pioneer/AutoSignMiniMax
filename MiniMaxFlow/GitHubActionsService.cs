@@ -132,7 +132,7 @@ internal sealed class GitHubActionsService
     private static Task<string> RunGhWithInputAsync(string input, params string[] arguments) =>
         RunGhCoreAsync(input, arguments);
 
-    private static async Task<string> RunGhCoreAsync(string? input, IReadOnlyList<string> arguments)
+    private static async Task<string> RunGhOnceAsync(string? input, IReadOnlyList<string> arguments)
     {
         using var process = new Process
         {
@@ -174,8 +174,31 @@ internal sealed class GitHubActionsService
             throw new InvalidOperationException(
                 "GitHub CLI 尚未登入或登入已過期。請在 PowerShell 執行 gh auth login -h github.com，完成後再同步。");
         }
-        throw new InvalidOperationException($"GitHub CLI 執行失敗：{reason}");
+        throw new GitHubCommandException($"GitHub CLI 執行失敗：{reason}", IsTransientNetworkFailure(reason));
     }
+
+    private static async Task<string> RunGhCoreAsync(string? input, IReadOnlyList<string> arguments)
+    {
+        const int attempts = 3;
+        for (var attempt = 1; ; attempt++)
+        {
+            try
+            {
+                return await RunGhOnceAsync(input, arguments);
+            }
+            catch (GitHubCommandException exception) when (exception.IsTransient && attempt < attempts)
+            {
+                await Task.Delay(TimeSpan.FromSeconds(2 * attempt));
+            }
+        }
+    }
+
+    private static bool IsTransientNetworkFailure(string reason) =>
+        reason.Contains("TLS handshake timeout", StringComparison.OrdinalIgnoreCase) ||
+        reason.Contains("connection reset by peer", StringComparison.OrdinalIgnoreCase) ||
+        reason.Contains("i/o timeout", StringComparison.OrdinalIgnoreCase) ||
+        reason.Contains("net/http: timeout", StringComparison.OrdinalIgnoreCase) ||
+        reason.Contains("unexpected EOF", StringComparison.OrdinalIgnoreCase);
 
     private static TimeZoneInfo GetTaipeiTimeZone()
     {
@@ -203,6 +226,11 @@ internal sealed record AccountResult(int Number, string Alias, string Status, st
     public bool IsConfigured => !Regex.IsMatch(Alias, "^account-\\d+$", RegexOptions.IgnoreCase);
     public bool IsSuccessful => string.Equals(Conclusion, "success", StringComparison.OrdinalIgnoreCase);
     public bool IsCompleted => string.Equals(Status, "completed", StringComparison.OrdinalIgnoreCase);
+}
+
+internal sealed class GitHubCommandException(string message, bool isTransient) : InvalidOperationException(message)
+{
+    public bool IsTransient { get; } = isTransient;
 }
 
 internal sealed record DashboardSnapshot(

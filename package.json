@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "claim": "node scripts/claim-daily-check-in.mjs",
-    "check": "node --check scripts/claim-daily-check-in.mjs && node --check scripts/minimax-signin.mjs && node --check scripts/session-store.mjs && node --check scripts/summarize-checkin-results.mjs && node --check scripts/streaks.mjs",
+    "check": "node --check scripts/claim-daily-check-in.mjs && node --check scripts/minimax-signin.mjs && node --check scripts/session-store.mjs && node --check scripts/summarize-checkin-results.mjs && node --check scripts/streaks.mjs && node --check scripts/capture-login.mjs",
     "test": "node --test scripts/streaks.test.mjs scripts/minimax-signin.test.mjs",
     "summary": "node scripts/summarize-checkin-results.mjs"
   },
