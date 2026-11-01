@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-31T17:39:11.101Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/41224505597",
+  "generatedAt": "2026-11-01T00:52:21.612Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/41254221674",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -49,16 +49,16 @@
         "2026-10-31",
         "2026-11-01"
       ],
-      "currentPoints": 10200,
-      "remainingCredits": 10200,
-      "siteStreak": 7,
-      "finishedAt": "2026-10-31T17:38:43.963Z"
+      "currentPoints": 10600,
+      "remainingCredits": 10600,
+      "siteStreak": 1,
+      "finishedAt": "2026-11-01T00:40:58.690Z"
     },
     {
       "account": 2,
-      "name": "abuhg17",
-      "label": "abuhg17",
-      "status": "checked_in",
+      "name": "account-2",
+      "label": "account-2",
+      "status": "skipped",
       "streak": 8,
       "lastCheckInDate": "2026-11-01",
       "checkInDates": [
@@ -100,16 +100,16 @@
         "2026-10-31",
         "2026-11-01"
       ],
-      "currentPoints": 10200,
-      "remainingCredits": 10200,
-      "siteStreak": 7,
-      "finishedAt": "2026-10-31T17:38:35.819Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 3,
-      "name": "goldshoot0720",
-      "label": "goldshoot0720",
-      "status": "checked_in",
+      "name": "account-3",
+      "label": "account-3",
+      "status": "skipped",
       "streak": 8,
       "lastCheckInDate": "2026-11-01",
       "checkInDates": [
@@ -155,10 +155,10 @@
         "2026-10-31",
         "2026-11-01"
       ],
-      "currentPoints": 7911.455,
-      "remainingCredits": 7911.455,
-      "siteStreak": 1,
-      "finishedAt": "2026-10-31T17:36:29.718Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 4,
@@ -198,10 +198,10 @@
         "2026-10-31",
         "2026-11-01"
       ],
-      "currentPoints": 10200,
-      "remainingCredits": 10200,
-      "siteStreak": 7,
-      "finishedAt": "2026-10-31T17:36:36.432Z"
+      "currentPoints": 10600,
+      "remainingCredits": 10600,
+      "siteStreak": 1,
+      "finishedAt": "2026-11-01T00:44:25.800Z"
     },
     {
       "account": 5,
@@ -244,10 +244,10 @@
         "2026-10-31",
         "2026-11-01"
       ],
-      "currentPoints": 10200,
-      "remainingCredits": 10200,
-      "siteStreak": 7,
-      "finishedAt": "2026-10-31T17:38:58.151Z"
+      "currentPoints": 10600,
+      "remainingCredits": 10600,
+      "siteStreak": 1,
+      "finishedAt": "2026-11-01T00:41:28.625Z"
     },
     {
       "account": 6,
@@ -290,10 +290,10 @@
         "2026-10-31",
         "2026-11-01"
       ],
-      "currentPoints": 10200,
-      "remainingCredits": 10200,
-      "siteStreak": 7,
-      "finishedAt": "2026-10-31T17:38:42.077Z"
+      "currentPoints": 10600,
+      "remainingCredits": 10600,
+      "siteStreak": 1,
+      "finishedAt": "2026-11-01T00:41:27.934Z"
     },
     {
       "account": 7,
