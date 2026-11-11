@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-11T06:53:55.963Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/42971552856",
+  "generatedAt": "2026-11-11T08:10:58.572Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/42981654736",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
       "account": 1,
       "name": "huang1988pioneer",
       "label": "huang1988pioneer",
-      "status": "failed",
-      "streak": 17,
-      "lastCheckInDate": "2026-11-10",
+      "status": "checked_in",
+      "streak": 18,
+      "lastCheckInDate": "2026-11-11",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
@@ -56,20 +56,21 @@
         "2026-11-07",
         "2026-11-08",
         "2026-11-09",
-        "2026-11-10"
+        "2026-11-10",
+        "2026-11-11"
       ],
-      "currentPoints": 13200,
-      "remainingCredits": 13200,
-      "siteStreak": 3,
-      "finishedAt": "2026-11-11T06:53:40.547Z"
+      "currentPoints": 14200,
+      "remainingCredits": 14200,
+      "siteStreak": 4,
+      "finishedAt": "2026-11-11T08:10:16.840Z"
     },
     {
       "account": 2,
       "name": "abuhg17",
       "label": "abuhg17",
-      "status": "failed",
-      "streak": 17,
-      "lastCheckInDate": "2026-11-10",
+      "status": "checked_in",
+      "streak": 18,
+      "lastCheckInDate": "2026-11-11",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
@@ -116,12 +117,13 @@
         "2026-11-07",
         "2026-11-08",
         "2026-11-09",
-        "2026-11-10"
+        "2026-11-10",
+        "2026-11-11"
       ],
-      "currentPoints": 13200,
-      "remainingCredits": 13200,
-      "siteStreak": 3,
-      "finishedAt": "2026-11-11T06:53:11.347Z"
+      "currentPoints": 14200,
+      "remainingCredits": 14200,
+      "siteStreak": 4,
+      "finishedAt": "2026-11-11T08:10:04.864Z"
     },
     {
       "account": 3,
@@ -185,7 +187,7 @@
       "currentPoints": 12048.866,
       "remainingCredits": 12048.866,
       "siteStreak": 4,
-      "finishedAt": "2026-11-11T06:53:42.378Z"
+      "finishedAt": "2026-11-11T08:10:44.984Z"
     },
     {
       "account": 4,
@@ -238,7 +240,7 @@
       "currentPoints": 14200,
       "remainingCredits": 14200,
       "siteStreak": 4,
-      "finishedAt": "2026-11-11T06:53:21.477Z"
+      "finishedAt": "2026-11-11T08:10:04.500Z"
     },
     {
       "account": 5,
@@ -294,7 +296,7 @@
       "currentPoints": 14200,
       "remainingCredits": 14200,
       "siteStreak": 4,
-      "finishedAt": "2026-11-11T06:53:02.271Z"
+      "finishedAt": "2026-11-11T08:10:12.525Z"
     },
     {
       "account": 6,
@@ -350,7 +352,7 @@
       "currentPoints": 14200,
       "remainingCredits": 14200,
       "siteStreak": 4,
-      "finishedAt": "2026-11-11T06:53:18.109Z"
+      "finishedAt": "2026-11-11T08:10:09.476Z"
     },
     {
       "account": 7,
