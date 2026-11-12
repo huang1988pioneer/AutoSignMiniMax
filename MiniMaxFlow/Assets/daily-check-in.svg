@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 392">
+  <defs>
+    <filter id="cardShadow" x="-12%" y="-12%" width="124%" height="136%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#142033" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="bellFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7FBFF"/>
+      <stop offset="0.28" stop-color="#B9DCFF"/>
+      <stop offset="0.62" stop-color="#4C93F8"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <g id="bellShape">
+      <path fill="url(#bellFill)" d="M0 0C-6 5-14 13-15 23-16 32-11 38-6 40-4 33-1 32 0 39 1 32 4 33 6 40 11 38 16 32 15 23 14 13 6 5 0 0Z"/>
+      <path fill="#FFFFFF" opacity="0.55" d="M-9 14C-11 21-9 31-5 36-3 28-2 26 0 28-4 21-6 15-9 14Z"/>
+      <path fill="#1E3A8A" opacity="0.15" d="M4 16C8 21 9 31 5 37 3 29 2 26 0 28 3 20 3 16 4 16Z"/>
+    </g>
+  </defs>
+
+  <rect x="16" y="12" width="648" height="360" rx="20" fill="#FFFFFF" filter="url(#cardShadow)"/>
+  <rect x="16.5" y="12.5" width="647" height="359" rx="19.5" fill="none" stroke="#EEF1F4"/>
+
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+    <text x="40" y="56" font-size="18" font-weight="700" fill="#1C2430">Daily Check-in</text>
+    <circle cx="176" cy="50" r="7.5" fill="none" stroke="#D0D5DD" stroke-width="1.2"/>
+    <text x="176" y="54" text-anchor="middle" font-size="11" font-weight="600" fill="#98A2B3">i</text>
+    <text x="40" y="84" font-size="15" font-weight="600" fill="#3B82F6">7-day streak this cycle</text>
+  </g>
+
+  <g transform="translate(430,18)">
+    <path d="M18 34C48 14 92 10 132 18C158 24 176 30 192 38" fill="none" stroke="#9CC6F8" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M86 16C102 2 124 6 120 18C106 16 94 20 86 16Z" fill="#B7D7FF" opacity="0.9"/>
+    <path d="M118 20C132 12 146 18 140 28C128 26 120 26 118 20Z" fill="#8EBEFA" opacity="0.75"/>
+    <use href="#bellShape" transform="translate(36,36) rotate(-16) scale(0.82)"/>
+    <use href="#bellShape" transform="translate(68,30) rotate(-6) scale(1.02)"/>
+    <use href="#bellShape" transform="translate(104,28) rotate(4) scale(1.16)"/>
+    <use href="#bellShape" transform="translate(142,32) rotate(10) scale(0.92)"/>
+    <use href="#bellShape" transform="translate(172,38) rotate(16) scale(0.7)"/>
+    <ellipse cx="196" cy="46" rx="5.5" ry="8" fill="url(#bellFill)" transform="rotate(24 196 46)"/>
+  </g>
+
+  <path d="M628 40L636 48M636 40L628 48" fill="none" stroke="#98A2B3" stroke-width="1.4" stroke-linecap="round"/>
+
+  <g fill="none" stroke="#E6EAF0" stroke-width="2" stroke-linecap="round">
+    <path d="M85 148H143"/>
+    <path d="M169 148H227"/>
+    <path d="M253 148H311"/>
+    <path d="M337 148H395"/>
+    <path d="M421 148H479"/>
+    <path d="M505 148H563"/>
+  </g>
+
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle">
+    <g fill="none" stroke="#5B9BFF" stroke-width="1.7">
+      <g>
+        <circle cx="72" cy="148" r="13" fill="#FFFFFF"/>
+        <path d="M67 148.4L70.4 152L77.2 144.4" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g>
+        <circle cx="156" cy="148" r="13" fill="#FFFFFF"/>
+        <path d="M151 148.4L154.4 152L161.2 144.4" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g>
+        <circle cx="240" cy="148" r="13" fill="#FFFFFF"/>
+        <path d="M235 148.4L238.4 152L245.2 144.4" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g>
+        <circle cx="324" cy="148" r="13" fill="#FFFFFF"/>
+        <path d="M319 148.4L322.4 152L329.2 144.4" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g>
+        <circle cx="408" cy="148" r="13" fill="#FFFFFF"/>
+        <path d="M403 148.4L406.4 152L413.2 144.4" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g>
+        <circle cx="492" cy="148" r="13" fill="#FFFFFF"/>
+        <path d="M487 148.4L490.4 152L497.2 144.4" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+    <g>
+      <circle cx="576" cy="148" r="13" fill="#2F7CF6"/>
+      <path d="M571 148.4L574.4 152L581.2 144.4" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="72" y="182" fill="#3B82F6">400</text>
+    <text x="156" y="182" fill="#3B82F6">400</text>
+    <text x="240" y="182" fill="#3B82F6">400</text>
+    <text x="324" y="182" fill="#3B82F6">1,000</text>
+    <text x="408" y="182" fill="#3B82F6">400</text>
+    <text x="492" y="182" fill="#3B82F6">400</text>
+    <text x="576" y="182" fill="#2F7CF6" font-weight="700">1,000</text>
+  </g>
+
+  <rect x="40" y="214" width="600" height="52" rx="12" fill="#17181A"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">
+    <text x="286" y="245" font-family="PingFang TC, Heiti TC, Helvetica Neue, sans-serif">預期</text>
+    <text x="360" y="245">1,000</text>
+  </g>
+  <g transform="translate(340,239)">
+    <circle r="8" fill="none" stroke="#FFFFFF" stroke-width="1.3"/>
+    <path d="M0-4.4L1.15-1.15L4.4 0L1.15 1.15L0 4.4L-1.15 1.15L-4.4 0L-1.15-1.15Z" fill="#FFFFFF"/>
+  </g>
+
+  <g font-family="PingFang TC, Heiti TC, Helvetica Neue, sans-serif" font-size="15">
+    <text x="40" y="306" fill="#52606D">連續七天點數</text>
+    <text x="168" y="306" font-weight="700" fill="#2F7CF6">4,000</text>
+    <text x="40" y="336" fill="#52606D">連續２８天點數</text>
+    <text x="184" y="336" font-weight="700" fill="#2F7CF6">16,000</text>
+  </g>
+</svg>

@@ -82,6 +82,8 @@
           <TextBlock Classes="muted" Text="手動執行每日簽到、查看最新 workflow 結果與帳號成功情況。" TextWrapping="Wrap" />
         </StackPanel>
 
+        <Svg Path="/Assets/daily-check-in.svg" Stretch="Uniform" Height="336"/>
+
         <Border x:Name="DashboardSection" Classes="panel">
           <StackPanel Spacing="14">
             <StackPanel Spacing="4">
