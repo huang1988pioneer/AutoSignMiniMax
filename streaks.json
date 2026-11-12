@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-12T08:30:23.362Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/43181836435",
+  "generatedAt": "2026-11-12T08:31:14.089Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/43183452682",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
       "account": 1,
-      "name": "account-1",
-      "label": "account-1",
-      "status": "skipped",
-      "streak": 18,
-      "lastCheckInDate": "2026-11-11",
+      "name": "huang1988pioneer",
+      "label": "huang1988pioneer",
+      "status": "checked_in",
+      "streak": 19,
+      "lastCheckInDate": "2026-11-12",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
@@ -57,18 +57,19 @@
         "2026-11-08",
         "2026-11-09",
         "2026-11-10",
-        "2026-11-11"
+        "2026-11-11",
+        "2026-11-12"
       ],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
+      "currentPoints": 13600,
+      "remainingCredits": 13600,
+      "siteStreak": 5,
+      "finishedAt": "2026-11-12T08:31:01.066Z"
     },
     {
       "account": 2,
-      "name": "account-2",
-      "label": "account-2",
-      "status": "skipped",
+      "name": "abuhg17",
+      "label": "abuhg17",
+      "status": "failed",
       "streak": 18,
       "lastCheckInDate": "2026-11-11",
       "checkInDates": [
@@ -123,13 +124,13 @@
       "currentPoints": null,
       "remainingCredits": null,
       "siteStreak": null,
-      "finishedAt": null
+      "finishedAt": "2026-11-12T08:30:48.245Z"
     },
     {
       "account": 3,
-      "name": "account-3",
-      "label": "account-3",
-      "status": "skipped",
+      "name": "goldshoot0720",
+      "label": "goldshoot0720",
+      "status": "failed",
       "streak": 19,
       "lastCheckInDate": "2026-11-12",
       "checkInDates": [
@@ -189,13 +190,13 @@
       "currentPoints": null,
       "remainingCredits": null,
       "siteStreak": null,
-      "finishedAt": null
+      "finishedAt": "2026-11-12T08:31:00.709Z"
     },
     {
       "account": 4,
-      "name": "account-4",
-      "label": "account-4",
-      "status": "skipped",
+      "name": "chbondg2",
+      "label": "chbondg2",
+      "status": "failed",
       "streak": 18,
       "lastCheckInDate": "2026-11-11",
       "checkInDates": [
@@ -242,13 +243,13 @@
       "currentPoints": null,
       "remainingCredits": null,
       "siteStreak": null,
-      "finishedAt": null
+      "finishedAt": "2026-11-12T08:30:53.418Z"
     },
     {
       "account": 5,
-      "name": "account-5",
-      "label": "account-5",
-      "status": "skipped",
+      "name": "feng33feng35feng3",
+      "label": "feng33feng35feng3",
+      "status": "checked_in",
       "streak": 19,
       "lastCheckInDate": "2026-11-12",
       "checkInDates": [
@@ -296,18 +297,18 @@
         "2026-11-11",
         "2026-11-12"
       ],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
+      "currentPoints": 14200,
+      "remainingCredits": 14200,
+      "siteStreak": 5,
+      "finishedAt": "2026-11-12T08:30:55.265Z"
     },
     {
       "account": 6,
-      "name": "account-6",
-      "label": "account-6",
-      "status": "skipped",
-      "streak": 18,
-      "lastCheckInDate": "2026-11-11",
+      "name": "fengtuprinfo",
+      "label": "fengtuprinfo",
+      "status": "checked_in",
+      "streak": 19,
+      "lastCheckInDate": "2026-11-12",
       "checkInDates": [
         "2026-09-27",
         "2026-09-28",
@@ -350,12 +351,13 @@
         "2026-11-08",
         "2026-11-09",
         "2026-11-10",
-        "2026-11-11"
+        "2026-11-11",
+        "2026-11-12"
       ],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
+      "currentPoints": 14200,
+      "remainingCredits": 14200,
+      "siteStreak": 5,
+      "finishedAt": "2026-11-12T08:30:55.250Z"
     },
     {
       "account": 7,
@@ -715,6 +717,6 @@
     "recorded": 33,
     "max": 19,
     "min": 0,
-    "average": 3.3
+    "average": 3.4
   }
 }
