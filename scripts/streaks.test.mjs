@@ -55,6 +55,28 @@ test('old null streaks start from observed success; missing timestamps do not fa
   assert.equal(updateStreak({ status: 'checked_in' }, null, now).streak, 0);
 });
 
+test('summary totals known MiniMax credits and skips unknown balances', () => {
+  const root = mkdtempSync(join(tmpdir(), 'minimax-credits-total-'));
+  try {
+    const input = join(root, 'input');
+    const output = join(root, 'output');
+    mkdirSync(input);
+    const timestamp = new Date().toISOString();
+    writeFileSync(join(input, 'one.json'), JSON.stringify({ account: 1, name: 'one', status: 'checked_in', finishedAt: timestamp, currentPoints: 13600 }));
+    writeFileSync(join(input, 'two.json'), JSON.stringify({ account: 2, name: 'two', status: 'checked_in', finishedAt: timestamp, currentPoints: 12848.866 }));
+    writeFileSync(join(input, 'three.json'), JSON.stringify({ account: 3, name: 'three', status: 'failed', finishedAt: timestamp, message: 'no balance' }));
+    const env = { ...process.env, MINIMAX_SUMMARY_DIR: output, MINIMAX_EXPECTED_ACCOUNTS: '3', GITHUB_STEP_SUMMARY: '' };
+    const script = fileURLToPath(new URL('./summarize-checkin-results.mjs', import.meta.url));
+    execFileSync(process.execPath, [script, input], { env, stdio: 'pipe' });
+    const summary = readFileSync(join(output, 'minimax-daily-summary.md'), 'utf8');
+    assert(summary.includes('| 2 | two | ✅ checked_in | 12,848.866 |'));
+    assert(summary.includes('| 3 | three | ❌ failed | unknown |'));
+    assert(summary.includes('| | **Total** | | **26,448.866** | | | |'));
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('malformed history fails instead of silently discarding records', () => {
   assert.throws(() => updateStreak(success(), { checkInDates: ['2026-02-30'] }, now));
   assert.throws(() => updateStreak(success(), { checkInDates: 'invalid' }, now));
@@ -84,7 +106,9 @@ test('summary reads history, publishes computed statistics and preserves same-da
       assert.equal(result.accounts[1].streak, 0);
       assert.deepEqual(result.summary, { recorded: 2, max: 2, min: 0, average: 1 });
       assert(!raw.includes('PRIVATE_MARKER'));
-      assert(readFileSync(join(output, 'minimax-daily-summary.md'), 'utf8').includes('MiniMax credits'));
+      const summary = readFileSync(join(output, 'minimax-daily-summary.md'), 'utf8');
+      assert(summary.includes('MiniMax credits'));
+      assert(summary.includes('| | **Total** | | **0** | | | |'));
       writeFileSync(history, raw);
     }
   } finally {

@@ -24,6 +24,14 @@ function compact(value, length = 140) {
   return text.length > length ? `${text.slice(0, length - 1)}…` : text || '—';
 }
 
+function knownCredits(value) {
+  return typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : null;
+}
+
+function formatCredits(value) {
+  return value.toLocaleString('en-US', { maximumFractionDigits: 3 });
+}
+
 const byAccount = new Map();
 for (const file of walkJsonFiles(inputDir)) {
   try {
@@ -108,14 +116,22 @@ if (activeRows.length) {
     '| # | Account | Status | MiniMax credits | Streak | Site streak | Note |',
     '| ---: | --- | --- | ---: | ---: | ---: | --- |',
   );
+  let creditsTotal = 0;
+  let knownCreditRows = 0;
   for (const row of activeRows) {
     const badge = row.status === 'checked_in' ? '✅ checked_in' : '❌ failed';
-    const credits = typeof row.currentPoints === 'number' && Number.isFinite(row.currentPoints) && row.currentPoints >= 0
-      ? row.currentPoints.toLocaleString('en-US') : 'unknown';
+    const points = knownCredits(row.currentPoints);
+    if (points !== null) {
+      creditsTotal += points;
+      knownCreditRows += 1;
+    }
+    const credits = points === null ? 'unknown' : formatCredits(points);
     // The site publishes its own cycle streak; ours counts recorded successes.
     const site = Number.isInteger(row.siteStreak) ? row.siteStreak : '—';
     lines.push(`| ${row.account} | ${escapeCell(row.name)} | ${badge} | ${credits} | ${row.streak} | ${site} | ${escapeCell(compact(row.message))} |`);
   }
+  const totalCell = knownCreditRows ? `**${formatCredits(creditsTotal)}**` : 'unknown';
+  lines.push(`| | **Total** | | ${totalCell} | | | |`);
   lines.push('');
 }
 
@@ -129,10 +145,8 @@ const accounts = rows.map((row) => ({
   streak: row.streak,
   lastCheckInDate: row.lastCheckInDate,
   checkInDates: row.checkInDates,
-  currentPoints: typeof row.currentPoints === 'number' && Number.isFinite(row.currentPoints) && row.currentPoints >= 0
-    ? row.currentPoints : null,
-  remainingCredits: typeof row.currentPoints === 'number' && Number.isFinite(row.currentPoints) && row.currentPoints >= 0
-    ? row.currentPoints : null,
+  currentPoints: knownCredits(row.currentPoints),
+  remainingCredits: knownCredits(row.currentPoints),
   siteStreak: Number.isInteger(row.siteStreak) ? row.siteStreak : null,
   finishedAt: row.finishedAt ?? null,
 }));
