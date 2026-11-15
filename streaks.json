@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-14T18:58:00.385Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/43627433080",
+  "generatedAt": "2026-11-15T01:26:55.432Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/43658573808",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -65,8 +65,8 @@
       ],
       "currentPoints": 14200,
       "remainingCredits": 14200,
-      "siteStreak": 7,
-      "finishedAt": "2026-11-14T18:55:19.821Z"
+      "siteStreak": 1,
+      "finishedAt": "2026-11-15T01:25:33.495Z"
     },
     {
       "account": 2,
@@ -128,10 +128,10 @@
         "2026-11-14",
         "2026-11-15"
       ],
-      "currentPoints": 13563.237,
-      "remainingCredits": 13563.237,
-      "siteStreak": 7,
-      "finishedAt": "2026-11-14T18:55:24.089Z"
+      "currentPoints": 13963.237,
+      "remainingCredits": 13963.237,
+      "siteStreak": 1,
+      "finishedAt": "2026-11-15T01:25:52.835Z"
     },
     {
       "account": 3,
@@ -197,10 +197,10 @@
         "2026-11-14",
         "2026-11-15"
       ],
-      "currentPoints": 14248.866,
-      "remainingCredits": 14248.866,
-      "siteStreak": 1,
-      "finishedAt": "2026-11-14T18:55:52.238Z"
+      "currentPoints": 14648.866,
+      "remainingCredits": 14648.866,
+      "siteStreak": 2,
+      "finishedAt": "2026-11-15T01:25:51.501Z"
     },
     {
       "account": 4,
@@ -256,8 +256,8 @@
       ],
       "currentPoints": 14200,
       "remainingCredits": 14200,
-      "siteStreak": 7,
-      "finishedAt": "2026-11-14T18:55:54.887Z"
+      "siteStreak": 1,
+      "finishedAt": "2026-11-15T01:26:10.564Z"
     },
     {
       "account": 5,
@@ -316,8 +316,8 @@
       ],
       "currentPoints": 14200,
       "remainingCredits": 14200,
-      "siteStreak": 7,
-      "finishedAt": "2026-11-14T18:57:48.062Z"
+      "siteStreak": 1,
+      "finishedAt": "2026-11-15T01:26:37.465Z"
     },
     {
       "account": 6,
@@ -376,8 +376,8 @@
       ],
       "currentPoints": 14200,
       "remainingCredits": 14200,
-      "siteStreak": 7,
-      "finishedAt": "2026-11-14T18:56:05.177Z"
+      "siteStreak": 1,
+      "finishedAt": "2026-11-15T01:26:43.883Z"
     },
     {
       "account": 7,
