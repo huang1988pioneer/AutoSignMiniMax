@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-16T11:31:40.867Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/43851174166",
+  "generatedAt": "2026-11-16T13:50:12.815Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/43873834874",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
       "account": 1,
-      "name": "huang1988pioneer",
-      "label": "huang1988pioneer",
-      "status": "checked_in",
+      "name": "account-1",
+      "label": "account-1",
+      "status": "skipped",
       "streak": 23,
       "lastCheckInDate": "2026-11-16",
       "checkInDates": [
@@ -64,16 +64,16 @@
         "2026-11-15",
         "2026-11-16"
       ],
-      "currentPoints": 13600,
-      "remainingCredits": 13600,
-      "siteStreak": 2,
-      "finishedAt": "2026-11-16T11:30:27.899Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 2,
-      "name": "abuhg17",
-      "label": "abuhg17",
-      "status": "checked_in",
+      "name": "account-2",
+      "label": "account-2",
+      "status": "skipped",
       "streak": 23,
       "lastCheckInDate": "2026-11-16",
       "checkInDates": [
@@ -130,16 +130,16 @@
         "2026-11-15",
         "2026-11-16"
       ],
-      "currentPoints": 13484.68,
-      "remainingCredits": 13484.68,
-      "siteStreak": 2,
-      "finishedAt": "2026-11-16T11:30:38.161Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 3,
-      "name": "goldshoot0720",
-      "label": "goldshoot0720",
-      "status": "checked_in",
+      "name": "account-3",
+      "label": "account-3",
+      "status": "skipped",
       "streak": 23,
       "lastCheckInDate": "2026-11-16",
       "checkInDates": [
@@ -200,16 +200,16 @@
         "2026-11-15",
         "2026-11-16"
       ],
-      "currentPoints": 15048.866,
-      "remainingCredits": 15048.866,
-      "siteStreak": 3,
-      "finishedAt": "2026-11-16T11:30:46.362Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 4,
-      "name": "chbondg2",
-      "label": "chbondg2",
-      "status": "checked_in",
+      "name": "account-4",
+      "label": "account-4",
+      "status": "skipped",
       "streak": 23,
       "lastCheckInDate": "2026-11-16",
       "checkInDates": [
@@ -258,16 +258,16 @@
         "2026-11-15",
         "2026-11-16"
       ],
-      "currentPoints": 13600,
-      "remainingCredits": 13600,
-      "siteStreak": 2,
-      "finishedAt": "2026-11-16T11:30:47.966Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 5,
-      "name": "feng33feng35feng3",
-      "label": "feng33feng35feng3",
-      "status": "checked_in",
+      "name": "account-5",
+      "label": "account-5",
+      "status": "skipped",
       "streak": 23,
       "lastCheckInDate": "2026-11-16",
       "checkInDates": [
@@ -319,16 +319,16 @@
         "2026-11-15",
         "2026-11-16"
       ],
-      "currentPoints": 14200,
-      "remainingCredits": 14200,
-      "siteStreak": 2,
-      "finishedAt": "2026-11-16T11:30:59.731Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 6,
-      "name": "fengtuprinfo",
-      "label": "fengtuprinfo",
-      "status": "checked_in",
+      "name": "account-6",
+      "label": "account-6",
+      "status": "skipped",
       "streak": 23,
       "lastCheckInDate": "2026-11-16",
       "checkInDates": [
@@ -380,10 +380,10 @@
         "2026-11-15",
         "2026-11-16"
       ],
-      "currentPoints": 14200,
-      "remainingCredits": 14200,
-      "siteStreak": 2,
-      "finishedAt": "2026-11-16T11:31:18.248Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 7,
