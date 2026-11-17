@@ -1,3 +1,6 @@
+.DS_Store
+.workbuddy-ai/
+
 node_modules/
 screenshots/
 auth.json
