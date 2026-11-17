@@ -153,7 +153,10 @@ jobs:
   check-in:
     name: check-in (${{ matrix.account }}) - ${{ vars[format('MINIMAX_ACCOUNT_NAME_{0}', matrix.account)] || (matrix.account == 1 && 'huang1988pioneer' || matrix.account == 2 && 'abuhg17' || matrix.account == 3 && 'goldshoot0720' || matrix.account == 4 && 'chbondg2' || matrix.account == 5 && 'feng33feng35feng3' || matrix.account == 6 && 'fengtuprinfo' || format('account-{0}', matrix.account)) }}
     needs: [random_start, validate-storage-states]
-    runs-on: ubuntu-latest
+    # Pinned on purpose: ubuntu-latest is now Ubuntu 26.04, which Playwright 1.55.0
+    # cannot install Chromium on ("Playwright does not support chromium on
+    # ubuntu26.04-x64"). Bump Playwright before moving this back to ubuntu-latest.
+    runs-on: ubuntu-24.04
     timeout-minutes: 12
     strategy:
       fail-fast: false
