@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-19T09:11:20.768Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/44490429086",
+  "generatedAt": "2026-11-19T12:13:35.538Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/44512537346",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -70,13 +70,13 @@
       "currentPoints": 14600,
       "remainingCredits": 14600,
       "siteStreak": 5,
-      "finishedAt": "2026-11-19T09:02:36.587Z"
+      "finishedAt": "2026-11-19T12:06:46.178Z"
     },
     {
       "account": 2,
-      "name": "abuhg17",
-      "label": "abuhg17",
-      "status": "checked_in",
+      "name": "account-2",
+      "label": "account-2",
+      "status": "skipped",
       "streak": 26,
       "lastCheckInDate": "2026-11-19",
       "checkInDates": [
@@ -136,16 +136,16 @@
         "2026-11-18",
         "2026-11-19"
       ],
-      "currentPoints": 14600,
-      "remainingCredits": 14600,
-      "siteStreak": 5,
-      "finishedAt": "2026-11-19T09:11:07.328Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 3,
-      "name": "goldshoot0720",
-      "label": "goldshoot0720",
-      "status": "checked_in",
+      "name": "account-3",
+      "label": "account-3",
+      "status": "skipped",
       "streak": 26,
       "lastCheckInDate": "2026-11-19",
       "checkInDates": [
@@ -209,10 +209,10 @@
         "2026-11-18",
         "2026-11-19"
       ],
-      "currentPoints": 13823.882,
-      "remainingCredits": 13823.882,
-      "siteStreak": 6,
-      "finishedAt": "2026-11-19T09:03:50.710Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 4,
@@ -273,7 +273,7 @@
       "currentPoints": 14600,
       "remainingCredits": 14600,
       "siteStreak": 5,
-      "finishedAt": "2026-11-19T09:04:14.491Z"
+      "finishedAt": "2026-11-19T12:07:19.870Z"
     },
     {
       "account": 5,
@@ -337,13 +337,13 @@
       "currentPoints": 14600,
       "remainingCredits": 14600,
       "siteStreak": 5,
-      "finishedAt": "2026-11-19T09:10:47.676Z"
+      "finishedAt": "2026-11-19T12:07:50.592Z"
     },
     {
       "account": 6,
-      "name": "fengtuprinfo",
-      "label": "fengtuprinfo",
-      "status": "checked_in",
+      "name": "account-6",
+      "label": "account-6",
+      "status": "skipped",
       "streak": 26,
       "lastCheckInDate": "2026-11-19",
       "checkInDates": [
@@ -398,10 +398,10 @@
         "2026-11-18",
         "2026-11-19"
       ],
-      "currentPoints": 14600,
-      "remainingCredits": 14600,
-      "siteStreak": 5,
-      "finishedAt": "2026-11-19T09:02:44.563Z"
+      "currentPoints": null,
+      "remainingCredits": null,
+      "siteStreak": null,
+      "finishedAt": null
     },
     {
       "account": 7,
