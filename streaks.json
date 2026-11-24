@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-24T14:04:04.108Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/45402195400",
+  "generatedAt": "2026-11-24T23:35:51.370Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/45504662602",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -8,8 +8,8 @@
       "name": "huang1988pioneer",
       "label": "huang1988pioneer",
       "status": "checked_in",
-      "streak": 31,
-      "lastCheckInDate": "2026-11-24",
+      "streak": 32,
+      "lastCheckInDate": "2026-11-25",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
@@ -70,20 +70,21 @@
         "2026-11-21",
         "2026-11-22",
         "2026-11-23",
-        "2026-11-24"
+        "2026-11-24",
+        "2026-11-25"
       ],
       "currentPoints": 16800,
       "remainingCredits": 16800,
       "siteStreak": 3,
-      "finishedAt": "2026-11-24T14:02:59.043Z"
+      "finishedAt": "2026-11-24T23:34:20.644Z"
     },
     {
       "account": 2,
       "name": "abuhg17",
       "label": "abuhg17",
       "status": "checked_in",
-      "streak": 31,
-      "lastCheckInDate": "2026-11-24",
+      "streak": 32,
+      "lastCheckInDate": "2026-11-25",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
@@ -144,20 +145,21 @@
         "2026-11-21",
         "2026-11-22",
         "2026-11-23",
-        "2026-11-24"
+        "2026-11-24",
+        "2026-11-25"
       ],
       "currentPoints": 16800,
       "remainingCredits": 16800,
       "siteStreak": 3,
-      "finishedAt": "2026-11-24T14:02:29.639Z"
+      "finishedAt": "2026-11-24T23:34:51.558Z"
     },
     {
       "account": 3,
       "name": "goldshoot0720",
       "label": "goldshoot0720",
       "status": "checked_in",
-      "streak": 31,
-      "lastCheckInDate": "2026-11-24",
+      "streak": 32,
+      "lastCheckInDate": "2026-11-25",
       "checkInDates": [
         "2026-09-19",
         "2026-09-20",
@@ -222,20 +224,21 @@
         "2026-11-21",
         "2026-11-22",
         "2026-11-23",
-        "2026-11-24"
+        "2026-11-24",
+        "2026-11-25"
       ],
-      "currentPoints": 17023.882,
-      "remainingCredits": 17023.882,
+      "currentPoints": 17000,
+      "remainingCredits": 17000,
       "siteStreak": 4,
-      "finishedAt": "2026-11-24T14:02:41.861Z"
+      "finishedAt": "2026-11-24T23:34:41.528Z"
     },
     {
       "account": 4,
       "name": "chbondg2",
       "label": "chbondg2",
       "status": "checked_in",
-      "streak": 31,
-      "lastCheckInDate": "2026-11-24",
+      "streak": 32,
+      "lastCheckInDate": "2026-11-25",
       "checkInDates": [
         "2026-09-27",
         "2026-09-28",
@@ -288,20 +291,21 @@
         "2026-11-21",
         "2026-11-22",
         "2026-11-23",
-        "2026-11-24"
+        "2026-11-24",
+        "2026-11-25"
       ],
       "currentPoints": 16800,
       "remainingCredits": 16800,
       "siteStreak": 3,
-      "finishedAt": "2026-11-24T14:02:34.972Z"
+      "finishedAt": "2026-11-24T23:34:58.439Z"
     },
     {
       "account": 5,
       "name": "feng33feng35feng3",
       "label": "feng33feng35feng3",
       "status": "checked_in",
-      "streak": 31,
-      "lastCheckInDate": "2026-11-24",
+      "streak": 32,
+      "lastCheckInDate": "2026-11-25",
       "checkInDates": [
         "2026-09-27",
         "2026-09-28",
@@ -357,20 +361,21 @@
         "2026-11-21",
         "2026-11-22",
         "2026-11-23",
-        "2026-11-24"
+        "2026-11-24",
+        "2026-11-25"
       ],
       "currentPoints": 16800,
       "remainingCredits": 16800,
       "siteStreak": 3,
-      "finishedAt": "2026-11-24T14:03:22.038Z"
+      "finishedAt": "2026-11-24T23:35:26.547Z"
     },
     {
       "account": 6,
       "name": "fengtuprinfo",
       "label": "fengtuprinfo",
       "status": "checked_in",
-      "streak": 31,
-      "lastCheckInDate": "2026-11-24",
+      "streak": 32,
+      "lastCheckInDate": "2026-11-25",
       "checkInDates": [
         "2026-09-27",
         "2026-09-28",
@@ -426,12 +431,13 @@
         "2026-11-21",
         "2026-11-22",
         "2026-11-23",
-        "2026-11-24"
+        "2026-11-24",
+        "2026-11-25"
       ],
       "currentPoints": 16800,
       "remainingCredits": 16800,
       "siteStreak": 3,
-      "finishedAt": "2026-11-24T14:03:45.482Z"
+      "finishedAt": "2026-11-24T23:35:34.823Z"
     },
     {
       "account": 7,
@@ -789,8 +795,8 @@
   "streakSource": "recorded_check_ins",
   "summary": {
     "recorded": 33,
-    "max": 31,
+    "max": 32,
     "min": 0,
-    "average": 5.6
+    "average": 5.8
   }
 }
