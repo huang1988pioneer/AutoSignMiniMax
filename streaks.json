@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-26T15:09:06.874Z",
-  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/45840578382",
+  "generatedAt": "2026-11-26T15:15:06.292Z",
+  "runUrl": "https://github.com/huang1988pioneer/AutoSignMiniMax/actions/runs/45846561337",
   "title": "MiniMax Code daily check-in results",
   "accounts": [
     {
@@ -76,7 +76,7 @@
       "currentPoints": 17000,
       "remainingCredits": 17000,
       "siteStreak": 4,
-      "finishedAt": "2026-11-26T15:07:44.848Z"
+      "finishedAt": "2026-11-26T15:14:19.333Z"
     },
     {
       "account": 2,
@@ -151,7 +151,7 @@
       "currentPoints": 17000,
       "remainingCredits": 17000,
       "siteStreak": 4,
-      "finishedAt": "2026-11-26T15:07:58.057Z"
+      "finishedAt": "2026-11-26T15:14:39.844Z"
     },
     {
       "account": 3,
@@ -230,7 +230,7 @@
       "currentPoints": 16400,
       "remainingCredits": 16400,
       "siteStreak": 5,
-      "finishedAt": "2026-11-26T15:08:12.623Z"
+      "finishedAt": "2026-11-26T15:14:33.626Z"
     },
     {
       "account": 4,
@@ -297,7 +297,7 @@
       "currentPoints": 17000,
       "remainingCredits": 17000,
       "siteStreak": 4,
-      "finishedAt": "2026-11-26T15:08:22.182Z"
+      "finishedAt": "2026-11-26T15:14:47.180Z"
     },
     {
       "account": 5,
@@ -367,7 +367,7 @@
       "currentPoints": 17000,
       "remainingCredits": 17000,
       "siteStreak": 4,
-      "finishedAt": "2026-11-26T15:08:49.173Z"
+      "finishedAt": "2026-11-26T15:14:08.376Z"
     },
     {
       "account": 6,
@@ -437,7 +437,7 @@
       "currentPoints": 17000,
       "remainingCredits": 17000,
       "siteStreak": 4,
-      "finishedAt": "2026-11-26T15:08:55.287Z"
+      "finishedAt": "2026-11-26T15:14:50.985Z"
     },
     {
       "account": 7,
@@ -479,305 +479,6 @@
       "finishedAt": null
     },
     {
-      "account": 10,
-      "name": "account-10",
-      "label": "account-10",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 11,
-      "name": "account-11",
-      "label": "account-11",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 12,
-      "name": "account-12",
-      "label": "account-12",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 13,
-      "name": "account-13",
-      "label": "account-13",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 14,
-      "name": "account-14",
-      "label": "account-14",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 15,
-      "name": "account-15",
-      "label": "account-15",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 16,
-      "name": "account-16",
-      "label": "account-16",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 17,
-      "name": "account-17",
-      "label": "account-17",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 18,
-      "name": "account-18",
-      "label": "account-18",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 19,
-      "name": "account-19",
-      "label": "account-19",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 20,
-      "name": "account-20",
-      "label": "account-20",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 21,
-      "name": "account-21",
-      "label": "account-21",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 22,
-      "name": "account-22",
-      "label": "account-22",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 23,
-      "name": "account-23",
-      "label": "account-23",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 24,
-      "name": "account-24",
-      "label": "account-24",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 25,
-      "name": "account-25",
-      "label": "account-25",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 26,
-      "name": "account-26",
-      "label": "account-26",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 27,
-      "name": "account-27",
-      "label": "account-27",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 28,
-      "name": "account-28",
-      "label": "account-28",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 29,
-      "name": "account-29",
-      "label": "account-29",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 30,
-      "name": "account-30",
-      "label": "account-30",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 31,
-      "name": "account-31",
-      "label": "account-31",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
-      "account": 32,
-      "name": "account-32",
-      "label": "account-32",
-      "status": "skipped",
-      "streak": 0,
-      "lastCheckInDate": null,
-      "checkInDates": [],
-      "currentPoints": null,
-      "remainingCredits": null,
-      "siteStreak": null,
-      "finishedAt": null
-    },
-    {
       "account": 33,
       "name": "account-33",
       "label": "account-33",
@@ -794,9 +495,9 @@
   "timeZone": "Asia/Taipei",
   "streakSource": "recorded_check_ins",
   "summary": {
-    "recorded": 33,
+    "recorded": 10,
     "max": 32,
     "min": 0,
-    "average": 5.8
+    "average": 19.2
   }
 }
