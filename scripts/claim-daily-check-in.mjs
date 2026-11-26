@@ -235,7 +235,7 @@ async function waitForStable(page, ms = 1_200) {
  * this flow never forges a check-in call of its own.
  */
 function observeSignin(page) {
-  const state = { panel: null, panelError: null, claim: null, claimError: null, claimSeen: false };
+  const state = { panel: null, panelError: null, claim: null, claimError: null };
   const waiters = [];
 
   const settle = () => {
@@ -258,7 +258,6 @@ function observeSignin(page) {
         return;
       }
       if (isSigninClaimRequest(request)) {
-        state.claimSeen = true;
         state.claim = parseClaimResult(unwrapPayload(await response.json()));
         state.claimError = null;
         if (state.claim.panel) siteStreak = state.claim.panel.streak;
@@ -266,7 +265,6 @@ function observeSignin(page) {
       }
     } catch (error) {
       if (isSigninClaimRequest(request)) {
-        state.claimSeen = true;
         state.claimError = cleanError(error);
       } else if (isSigninStatusRequest(request)) {
         state.panelError = cleanError(error);
@@ -294,7 +292,7 @@ function observeSignin(page) {
   return {
     state,
     waitForPanel: (timeoutMs) => waitFor(() => state.panel !== null || state.panelError !== null, timeoutMs),
-    waitForClaim: (timeoutMs) => waitFor(() => state.claimSeen, timeoutMs),
+    waitForClaim: (timeoutMs) => waitFor(() => state.claim !== null || state.claimError !== null, timeoutMs),
   };
 }
 
@@ -406,6 +404,12 @@ async function tryCheckInOnce(browser, state, contextOptions) {
       throw new Error('MiniMax offered no claimable day today (the check-in may be disabled for this account).');
     }
 
+    const updateNotice = page.getByRole('dialog', { name: 'MiniMax Code Update Is Here', exact: true });
+    await page.addLocatorHandler(updateNotice, async (dialog) => {
+      await dialog.getByRole('button', { name: /^(?:Close|關閉|关闭)$/i }).click({ timeout: 5_000 });
+      log('Dismissed the MiniMax Code update notice.');
+    });
+
     if (!await revealCheckInCard(page)) {
       await saveScreenshot(page, 'check-in-card-not-found');
       throw new Error('Could not open the MiniMax check-in card; the sidebar layout may have changed.');
@@ -422,7 +426,19 @@ async function tryCheckInOnce(browser, state, contextOptions) {
       throw new Error('The MiniMax check-in button is present but disabled.');
     }
 
-    await button.click({ timeout: 10_000 });
+    try {
+      await button.click({ timeout: 10_000 });
+    } catch (error) {
+      const hit = await button.evaluate((element) => {
+        const { x, y, width, height } = element.getBoundingClientRect();
+        const target = document.elementFromPoint(x + width / 2, y + height / 2);
+        if (!target) return 'outside the viewport';
+        return target.closest('[role="dialog"]') ? `<${target.localName}> inside a dialog` : `<${target.localName}>`;
+      }, undefined, { timeout: 1_000 }).catch(() => 'unknown');
+      warn(`Check-in click failed. Element at button center: ${hit}.`);
+      await saveScreenshot(page, 'claim-button-click-failed');
+      throw error;
+    }
     log('Clicked the check-in button; waiting for the official claim response…');
     await observer.waitForClaim(CLAIM_TIMEOUT_MS);
 
