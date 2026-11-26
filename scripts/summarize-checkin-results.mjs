@@ -4,7 +4,9 @@ import { updateStreak } from './streaks.mjs';
 
 const inputDir = process.argv[2] || 'collected';
 const outputDir = process.env.MINIMAX_SUMMARY_DIR || 'artifacts';
-const expectedAccounts = Number(process.env.MINIMAX_EXPECTED_ACCOUNTS || 33);
+const accountNumbers = process.env.MINIMAX_EXPECTED_ACCOUNTS
+  ? Array.from({ length: Number(process.env.MINIMAX_EXPECTED_ACCOUNTS) }, (_, index) => index + 1)
+  : JSON.parse(readFileSync(new URL('./checkin-accounts.json', import.meta.url), 'utf8'));
 const sessionWarnDays = Number(process.env.MINIMAX_SESSION_WARN_DAYS) || 7;
 
 function walkJsonFiles(dir) {
@@ -42,14 +44,11 @@ for (const file of walkJsonFiles(inputDir)) {
   }
 }
 
-const rows = Array.from({ length: expectedAccounts }, (_, index) => {
-  const account = index + 1;
-  return byAccount.get(account) || {
-    account,
-    name: `account-${account}`,
-    status: 'skipped',
-    message: 'No login state or cookie secret configured.',
-  };
+const rows = accountNumbers.map((account) => byAccount.get(account) || {
+  account,
+  name: `account-${account}`,
+  status: 'skipped',
+  message: 'No login state or cookie secret configured.',
 });
 
 const generatedAt = new Date().toISOString();

@@ -1,13 +1,13 @@
 # AutoSignMiniMax
 
-使用 GitHub Actions 自動完成 [MiniMax Agent](https://agent.minimax.io/) 的每日簽到。工作流程每日會在多個台北時間時段執行，也可以手動觸發；支援最多 33 個帳號，並在失敗時保留截圖以利排查。
+使用 GitHub Actions 自動完成 [MiniMax Agent](https://agent.minimax.io/) 的每日簽到。工作流程每日會在多個台北時間時段執行，也可以手動觸發。目前排程的帳號編號為 1～9 和 33，失敗時會保留截圖以利排查。
 
 流程沿用 AutoSignOiiOii 的架構（多帳號、Storage State、連續天數統計、桌面登入工具），但簽到動作改為 MiniMax 自己的介面：腳本只會點擊網站原生的簽到卡片按鈕，並以網站回傳的官方回應作為成功依據。
 
 ## 功能
 
 - 每日自動執行，或從 GitHub Actions 手動執行
-- 支援 1～33 個 MiniMax 帳號；未設定 Secret 的編號會自動略過
+- 支援最多 10 個 MiniMax 帳號，未設定 Secret 的編號會自動略過
 - 優先使用 Playwright Storage State，也可使用 Cookie Header
 - 以 MiniMax 官方端點確認結果，不自行偽造簽到請求
 - 找不到卡片或暫時失敗時，最多重試 3 次
@@ -62,13 +62,13 @@ base64 -w0 auth.json
 
 | Secret | 用途 |
 | --- | --- |
-| `MINIMAX_STORAGE_STATE_B64_1` … `MINIMAX_STORAGE_STATE_B64_33` | 各帳號的 Base64 Storage State（建議） |
-| `MINIMAX_COOKIE_1` … `MINIMAX_COOKIE_33` | 各帳號的 Cookie Header（可替代 Storage State） |
+| `MINIMAX_STORAGE_STATE_B64_N` | 帳號 N 的 Base64 Storage State（建議） |
+| `MINIMAX_COOKIE_N` | 帳號 N 的 Cookie Header（可替代 Storage State） |
 | `MINIMAX_SECRET_WRITE_TOKEN` | 選用。具備 `Secrets: read and write` 權限的 PAT，用於自動輪替登入狀態 |
 
-每個帳號只要設定其中一種登入方式即可，且 Storage State 優先。workflow 會執行全部 33 個編號；未設定 Secret 的帳號會自動略過，不必連續編號。
+將 `N` 換成帳號編號（1～9 或 33）。每個帳號只要設定其中一種登入方式即可，且 Storage State 優先。未設定 Secret 的帳號會自動略過。
 
-帳號別名可用 Variables `MINIMAX_ACCOUNT_NAME_1` … `MINIMAX_ACCOUNT_NAME_33` 指定；未設定時，編號 `1`、`2`、`3`、`4`、`5`、`6` 會顯示為 `huang1988pioneer`、`abuhg17`、`goldshoot0720`、`chbondg2`、`feng33feng35feng3`、`fengtuprinfo`，其餘顯示為 `account-N`。
+帳號別名可用 Variables `MINIMAX_ACCOUNT_NAME_N` 指定；未設定時，編號 `1`、`2`、`3`、`4`、`5`、`6` 會顯示為 `huang1988pioneer`、`abuhg17`、`goldshoot0720`、`chbondg2`、`feng33feng35feng3`、`fengtuprinfo`，其餘顯示為 `account-N`。
 
 請勿把 `auth.json`、Cookie 或任何登入憑證提交到儲存庫。
 
@@ -94,7 +94,7 @@ GitHub Actions 每天會在下列台北時間（UTC+8）各自執行一次：
 | 13:00–14:00 | 整點觸發後，隨機等待 0–59 分鐘再開始 |
 | 21:00–22:00 | 整點觸發後，隨機等待 0–59 分鐘再開始 |
 
-同一次 workflow 中，帳號 1 會先執行；每個後續帳號都會在前一個帳號後再隨機延遲 **5–15 秒**，避免 33 個帳號同時操作。GitHub 的排程本身也可能延遲，因此實際開始時間可能略晚於上述時段。
+同一次排程中，帳號 1 的等待時間是 0 秒，之後依 2～9、33 的順序，每個帳號的等待時間比前一個再多 **5–15 秒**。GitHub 的排程本身也可能延遲，因此實際開始時間可能略晚於上述時段。
 
 ## 在本機執行
 
