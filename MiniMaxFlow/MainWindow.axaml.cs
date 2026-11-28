@@ -686,7 +686,9 @@ public partial class MainWindow : Window
         foreach (var startPath in new[] { AppContext.BaseDirectory, Environment.CurrentDirectory }.Distinct())
         {
             for (var directory = new DirectoryInfo(startPath); directory is not null; directory = directory.Parent)
-                if (File.Exists(Path.Combine(directory.FullName, "package.json")) && IsWritableDirectory(directory.FullName))
+                if (File.Exists(Path.Combine(directory.FullName, "package.json")) &&
+                    File.Exists(Path.Combine(directory.FullName, "scripts", "capture-login.mjs")) &&
+                    IsWritableDirectory(directory.FullName))
                     return directory.FullName;
         }
 
@@ -716,6 +718,27 @@ public partial class MainWindow : Window
 
     private static void EnsureNodeProjectFiles(string workspace)
     {
+        // Playwright is installed here, so the packaged ES module must also live here for Node to resolve it.
+        var scripts = Directory.CreateDirectory(Path.Combine(workspace, "scripts"));
+        var capturePath = Path.Combine(scripts.FullName, "capture-login.mjs");
+        using var resource = typeof(MainWindow).Assembly.GetManifestResourceStream("MiniMaxFlow.capture-login.mjs")
+            ?? throw new InvalidOperationException("應用程式缺少登入腳本。");
+        using var reader = new StreamReader(resource);
+        var captureScript = reader.ReadToEnd();
+        if (!File.Exists(capturePath) || File.ReadAllText(capturePath) != captureScript)
+        {
+            var temporaryPath = Path.Combine(scripts.FullName, Path.GetRandomFileName());
+            try
+            {
+                File.WriteAllText(temporaryPath, captureScript);
+                File.Move(temporaryPath, capturePath, overwrite: true);
+            }
+            finally
+            {
+                File.Delete(temporaryPath);
+            }
+        }
+
         var packageJson = Path.Combine(workspace, "package.json");
         if (!File.Exists(packageJson))
         {

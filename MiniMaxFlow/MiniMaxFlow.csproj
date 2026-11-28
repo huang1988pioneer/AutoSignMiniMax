@@ -12,6 +12,7 @@
     <AvaloniaResource Include="Assets\icon.png" />
     <AvaloniaResource Include="Assets\daily-check-in.svg" />
     <AvaloniaResource Include="Assets\check-in-circuit.svg" />
+    <EmbeddedResource Include="../scripts/capture-login.mjs" LogicalName="MiniMaxFlow.capture-login.mjs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="12.1.0" />
