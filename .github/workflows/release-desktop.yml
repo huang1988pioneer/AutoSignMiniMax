@@ -12,19 +12,23 @@ permissions:
 jobs:
   package:
     name: Package ${{ matrix.name }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.runner }}
     strategy:
       fail-fast: false
       matrix:
         include:
           - rid: win-x64
             name: windows-x64
+            runner: ubuntu-latest
           - rid: linux-x64
             name: linux-x64
+            runner: ubuntu-latest
           - rid: osx-x64
             name: macos-x64
+            runner: macos-latest
           - rid: osx-arm64
             name: macos-arm64
+            runner: macos-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -44,7 +48,35 @@ jobs:
           -p:DebugType=None
           -p:DebugSymbols=false
 
-      - name: Create archive
+      - name: Create macOS app archive
+        if: runner.os == 'macOS'
+        shell: bash
+        env:
+          PACKAGE: ${{ matrix.name }}
+        run: |
+          set -euo pipefail
+          app="$RUNNER_TEMP/MiniMaxFlow.app"
+          mkdir -p "$app/Contents/Resources" dist
+          ditto "publish/$PACKAGE" "$app/Contents/MacOS"
+          cp MiniMaxFlow/Assets/icon.icns "$app/Contents/Resources/MiniMaxFlow.icns"
+          plist="$app/Contents/Info.plist"
+          cp MiniMaxFlow/Info.plist "$plist"
+          if [[ "$GITHUB_REF_TYPE" == tag ]]; then
+            version="${GITHUB_REF_NAME#v}"
+            plutil -replace CFBundleShortVersionString -string "$version" "$plist"
+            plutil -replace CFBundleVersion -string "$version" "$plist"
+          fi
+          plutil -lint "$plist"
+          codesign --force --sign - "$app"
+          archive="dist/MiniMaxFlow-$PACKAGE.zip"
+          ditto -c -k --norsrc --keepParent "$app" "$archive"
+          unpacked="$RUNNER_TEMP/verify/MiniMaxFlow.app"
+          ditto -x -k "$archive" "$RUNNER_TEMP/verify"
+          test -x "$unpacked/Contents/MacOS/MiniMaxFlow"
+          codesign --verify --strict --deep "$unpacked"
+
+      - name: Create Windows or Linux archive
+        if: runner.os != 'macOS'
         shell: bash
         run: |
           mkdir -p dist

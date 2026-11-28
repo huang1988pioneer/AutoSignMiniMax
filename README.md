@@ -148,6 +148,8 @@ npm test
 
 ## 桌面登入工具（macOS、Linux、Windows）
 
+macOS 從 v1.0.5 起提供標準 App。Apple Silicon Mac 請下載 `MiniMaxFlow-macos-arm64.zip`，Intel Mac 請下載 `MiniMaxFlow-macos-x64.zip`。解壓縮後將 `MiniMaxFlow.app` 放到桌面或「應用程式」，從 Finder 雙擊即可開啟簽到工作台。[下載桌面版](https://github.com/huang1988pioneer/AutoSignMiniMax/releases/latest)
+
 專案內含 Avalonia 桌面工具，可協助建立並複製 Storage State：
 
 ```bash

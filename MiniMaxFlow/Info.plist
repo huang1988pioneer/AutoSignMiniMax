@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+  <key>CFBundleIdentifier</key><string>io.github.huang1988pioneer.AutoSignMiniMax.MiniMaxFlow</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleName</key><string>MiniMaxFlow</string>
+  <key>CFBundleDisplayName</key><string>MiniMax Flow</string>
+  <key>CFBundleExecutable</key><string>MiniMaxFlow</string>
+  <key>CFBundleIconFile</key><string>MiniMaxFlow.icns</string>
+  <key>CFBundleShortVersionString</key><string>0.0.0</string>
+  <key>CFBundleVersion</key><string>0.0.0</string>
+  <key>LSApplicationCategoryType</key><string>public.app-category.utilities</string>
+  <key>NSHighResolutionCapable</key><true/>
+  <key>LSEnvironment</key>
+  <dict>
+    <key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+  </dict>
+</dict>
+</plist>
