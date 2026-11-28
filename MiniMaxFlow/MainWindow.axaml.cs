@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.Json;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Automation;
 using Avalonia.Input.Platform;
 using Avalonia.Interactivity;
 using Avalonia.Threading;
@@ -23,6 +24,9 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        Navigation.SelectionChanged += (_, _) => ShowSelectedPage();
+        SizeChanged += (_, e) => UpdateLayoutForWidth(e.NewSize.Width);
+        UpdateLayoutForWidth(Width);
         AccountComboBox.ItemsSource = Enumerable.Range(1, AccountCount).Select(number => $"帳號 {number:00}").ToArray();
         AccountComboBox.SelectionChanged += (_, _) => UpdateSecretName();
         Closed += (_, _) => _lifetimeCancellation.Cancel();
@@ -143,18 +147,31 @@ public partial class MainWindow : Window
         }
     }
 
-    private void DashboardNavButton_OnClick(object? sender, RoutedEventArgs e) => ShowView(DashboardView);
-
-    private void AccountNavButton_OnClick(object? sender, RoutedEventArgs e) => ShowView(AccountView);
-
-    private void LoginNavButton_OnClick(object? sender, RoutedEventArgs e) => ShowView(LoginView);
-
-    private void ShowView(Control view)
+    private void ShowSelectedPage()
     {
-        DashboardView.IsVisible = view == DashboardView;
-        AccountView.IsVisible = view == AccountView;
-        LoginView.IsVisible = view == LoginView;
-        view.BringIntoView();
+        DashboardView.IsVisible = Navigation.SelectedIndex == 0;
+        AccountView.IsVisible = Navigation.SelectedIndex == 1;
+        LoginView.IsVisible = Navigation.SelectedIndex == 2;
+        PageScroll.Offset = default;
+    }
+
+    private void UpdateLayoutForWidth(double width)
+    {
+        var narrow = width < 620;
+        Grid.SetColumn(Navigation, narrow ? 0 : 1);
+        Grid.SetRow(Navigation, narrow ? 1 : 0);
+        Navigation.HorizontalAlignment = narrow ? Avalonia.Layout.HorizontalAlignment.Left : Avalonia.Layout.HorizontalAlignment.Right;
+        Header.RowSpacing = narrow ? 6 : 0;
+        Header.Margin = narrow ? new Thickness(12, 8) : new Thickness(24, 10);
+        PageBody.Margin = narrow ? new Thickness(12, 14) : new Thickness(28, 22, 28, 26);
+        var singleColumn = width < 790;
+        CircuitArt.IsVisible = !singleColumn;
+        // Collapse the schedule track as its panel moves below the results.
+        DashboardColumns.ColumnDefinitions[1].Width = new GridLength(singleColumn ? 0 : 270);
+        DashboardColumns.ColumnSpacing = singleColumn ? 0 : 16;
+        DashboardColumns.RowSpacing = singleColumn ? 16 : 0;
+        Grid.SetColumn(SchedulePanel, singleColumn ? 0 : 1);
+        Grid.SetRow(SchedulePanel, singleColumn ? 1 : 0);
     }
 
     private async void RefreshDashboardButton_OnClick(object? sender, RoutedEventArgs e)
@@ -193,6 +210,7 @@ public partial class MainWindow : Window
         MonthlyPointsMetric.Text = snapshot.MonthlyClaimedPoints.ToString("0.##");
         LastSuccessfulActionMetric.Text = FormatActionTime(snapshot.LastSuccessfulActionTime);
         LastFailedActionMetric.Text = FormatActionTime(snapshot.LastFailedActionTime);
+        ResultsHeader.IsVisible = snapshot.Accounts.Length > 0;
 
         if (snapshot.LatestRun is null)
         {
@@ -206,7 +224,7 @@ public partial class MainWindow : Window
             : snapshot.LatestRun.Conclusion;
         var unconfiguredCount = snapshot.Accounts.Count(account => !account.IsConfigured);
         DashboardStatusText.Text =
-            $"最近執行：{snapshot.LatestRun.CreatedAt.LocalDateTime:g} · {runStatus} · " +
+            $"最近執行 {snapshot.LatestRun.CreatedAt.LocalDateTime:g}（{runStatus}）。" +
             $"成功 {snapshot.SuccessfulAccounts.Length} 個、失敗 {snapshot.FailedAccounts.Length} 個、未設定 {unconfiguredCount} 個。";
 
         ActionAccountResultsPanel.Children.Clear();
@@ -220,12 +238,16 @@ public partial class MainWindow : Window
                 : account.IsSuccessful
                 ? "登入有效、領取流程成功"
                 : account.IsCompleted ? "登入或領取流程失敗" : "尚在執行或未設定";
-            var row = new Grid { ColumnDefinitions = new ColumnDefinitions("78,160,*") };
+            var row = new Grid { ColumnDefinitions = new ColumnDefinitions("58,*,*"), ColumnSpacing = 8, Margin = new Thickness(0, 6) };
             row.Children.Add(new TextBlock { Text = $"帳號 {account.Number:00}", FontWeight = Avalonia.Media.FontWeight.SemiBold });
             var aliasText = new TextBlock { Text = alias, TextTrimming = Avalonia.Media.TextTrimming.CharacterEllipsis };
+            ToolTip.SetTip(aliasText, alias);
             Grid.SetColumn(aliasText, 1);
             row.Children.Add(aliasText);
             var stateText = new TextBlock { Text = result };
+            stateText.Classes.Add("result");
+            if (account.IsConfigured && account.IsCompleted)
+                stateText.Classes.Add(account.IsSuccessful ? "success" : "failure");
             Grid.SetColumn(stateText, 2);
             row.Children.Add(stateText);
             ActionAccountResultsPanel.Children.Add(row);
@@ -311,11 +333,11 @@ public partial class MainWindow : Window
         {
             var input = new TextBox
             {
-                Width = 330,
                 PlaceholderText = "帳號名稱（可留白）",
                 Text = _accountAliases.GetValueOrDefault(number) ?? string.Empty,
             };
             var accountNumber = number;
+            AutomationProperties.SetName(input, $"帳號 {number:00} 別名");
             input.TextChanged += (_, _) =>
             {
                 var alias = input.Text?.Trim() ?? string.Empty;
@@ -325,8 +347,9 @@ public partial class MainWindow : Window
             };
             _aliasInputs[number] = input;
 
-            var row = new StackPanel { Orientation = Avalonia.Layout.Orientation.Horizontal, Spacing = 10 };
-            row.Children.Add(new TextBlock { Text = $"帳號 {number:00}", Width = 68, VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center });
+            var row = new Grid { ColumnDefinitions = new ColumnDefinitions("78,*") };
+            row.Children.Add(new TextBlock { Text = $"帳號 {number:00}", VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center });
+            Grid.SetColumn(input, 1);
             row.Children.Add(input);
             AliasListPanel.Children.Add(row);
         }
@@ -345,7 +368,7 @@ public partial class MainWindow : Window
         if (directory is not null) Directory.CreateDirectory(directory);
         await File.WriteAllTextAsync(AliasFile, JsonSerializer.Serialize(_accountAliases));
         UpdateSecretName();
-        StatusText.Text = "帳號別名已儲存在這台電腦。";
+        AliasStatusText.Text = "帳號別名已儲存在這台電腦。";
     }
 
     private string? ExistingStateFile()

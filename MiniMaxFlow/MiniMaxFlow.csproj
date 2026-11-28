@@ -11,6 +11,7 @@
     <None Remove="Assets\icon.png" />
     <AvaloniaResource Include="Assets\icon.png" />
     <AvaloniaResource Include="Assets\daily-check-in.svg" />
+    <AvaloniaResource Include="Assets\check-in-circuit.svg" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="12.1.0" />
